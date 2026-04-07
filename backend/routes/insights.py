@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from services.insights_service import build_insights_payload
+from services.seller_service import build_insights_payload
 
 router = APIRouter(tags=["insights"])
 

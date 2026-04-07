@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from services.analytics_service import build_analytics_payload
+from services.operations_service import build_analytics_payload
 
 router = APIRouter(tags=["analytics"])
 

@@ -8,7 +8,7 @@ const STORAGE_KEY = 'supportops_settings'
 
 const defaults = {
   queryRewriting: true,
-  multiQueryRetrieval: true,
+  multiQueryRetrieval: false,
   contextCompression: false,
 }
 

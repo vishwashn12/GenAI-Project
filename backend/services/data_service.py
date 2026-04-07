@@ -9,7 +9,7 @@ import pandas as pd
 
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
-DATASET_DIR = ROOT_DIR / "dataset"
+DATASET_DIR = ROOT_DIR / "processed_dataset"
 
 
 def candidate_paths(filename: str) -> list[Path]:

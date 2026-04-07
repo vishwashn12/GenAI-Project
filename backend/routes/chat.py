@@ -14,6 +14,9 @@ class ChatRequest(BaseModel):
     query: str = Field(..., min_length=1, description="Customer support query")
     order_id: str = Field(default="", description="Optional order id")
     session_id: str = Field(default="default", description="Session ID for memory")
+    use_rewrite: bool = Field(default=True)
+    use_mq: bool = Field(default=False)
+    use_comp: bool = Field(default=False)
 
     @validator('query')
     def query_not_whitespace(cls, v):
@@ -29,6 +32,10 @@ def chat(request: ChatRequest, req: Request) -> dict:
         return ask_rag(
             query=request.query,
             order_id=request.order_id,
+            session_id=request.session_id,
+            use_rewrite=request.use_rewrite,
+            use_mq=request.use_mq,
+            use_comp=request.use_comp,
             app=req.app,
         )
     except Exception as exc:

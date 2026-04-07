@@ -11,7 +11,7 @@ from typing import Optional
 from langchain_core.messages import HumanMessage
 from langchain_core.output_parsers import StrOutputParser
 
-from rag.intent import QueryIntent, classify_intent
+from rag.intent import QueryIntent, classify_intent, classify_intent_llm
 from rag.prompts import PROMPT_REGISTRY
 from rag.context import format_context
 from rag.rewriter import rewrite_query
@@ -48,7 +48,8 @@ class OlistRAGSystem:
     Memory: conversation memory + feedback loop retry
     """
 
-    AGENT_TRIGGERS = ['order_status', 'delivery_issue', 'seller_issue']
+    # Intents that BENEFIT from structured data lookup (order_lookup / seller_analysis tools)
+    AGENT_TRIGGERS = {'order_status', 'delivery_issue', 'seller_issue', 'refund_request'}
 
     def __init__(
         self,
@@ -76,27 +77,51 @@ class OlistRAGSystem:
         self.use_comp = use_compress
         self.use_mh = use_multihop
 
-    def _should_use_agent(self, query: str) -> bool:
-        return classify_intent(query).value in self.AGENT_TRIGGERS
+    def _should_use_agent(self, query: str, order_id: str = '', intent: QueryIntent | None = None) -> bool:
+        """
+        Use the agent ONLY when we have structured data to look up.
+        - No ID → RAG always wins (agent has nothing to query)
+        - ID + transactional intent → agent (can call order_lookup / seller_analysis)
+        - ID + policy/general intent → RAG (policy questions don't need DB lookup)
+        """
+        if not order_id:
+            return False
+        resolved_intent = intent or classify_intent(query)
+        return resolved_intent.value in self.AGENT_TRIGGERS
 
     def _rag_chain_answer(
         self,
         query: str,
         order_id: str = '',
         session_id: str = 'default',
+        use_rewrite: bool | None = None,
+        use_mq: bool | None = None,
+        use_comp: bool | None = None,
+        pre_intent: QueryIntent | None = None,  # pass in from answer() to avoid double classification
     ) -> dict:
         t0 = time.time()
+        
+        # Merge request settings with defaults
+        active_rewrite = self.use_rewrite if use_rewrite is None else use_rewrite
+        active_mq = self.use_mq if use_mq is None else use_mq
+        active_comp = self.use_comp if use_comp is None else use_comp
+
         original_query = query  # keep original before expansion
 
-        # ── Step 1: Inject conversation history ───────────────
-        history = memory_store.get_history(session_id)
+        # ── Step 1: Build history-enriched search query ───────────────
+        # retrieval history: compact (user turns only) — lighter on tokens
+        retrieval_history  = memory_store.get_history(session_id, for_retrieval=True)
+        # generation history: full turns — LLM needs both sides to understand references
+        generation_history = memory_store.get_history(session_id, for_retrieval=False)
+
         search_query = (
-            f"Previous context:\n{history}\n\nCurrent question: {query}"
-            if history else query
+            f"Previous context:\n{retrieval_history}\n\nCurrent question: {query}"
+            if retrieval_history else query
         )
 
+
         # ── Step 2: Query rewriting ───────────────────────────
-        if self.use_rewrite:
+        if active_rewrite:
             search_query = rewrite_query(search_query, self.rewrite_chain)
 
         # ── Step 3: Retrieval ─────────────────────────────────
@@ -104,7 +129,7 @@ class OlistRAGSystem:
             docs = multi_hop_retrieve(
                 search_query, self.retriever, self.reranker, self.llm
             )
-        elif self.use_mq:
+        elif active_mq:
             docs = multi_query_retrieve(
                 search_query, self.retriever, self.reranker,
                 self.multi_query_chain,
@@ -113,7 +138,7 @@ class OlistRAGSystem:
             docs = self.retriever.retrieve(search_query, k=5)
 
         # ── Step 4: Optional compression ─────────────────────
-        if self.use_comp:
+        if active_comp:
             if classify_intent(query) == QueryIntent.POLICY_QUERY:
                 docs = compress_context(
                     query, docs, self.compress_chain
@@ -123,10 +148,15 @@ class OlistRAGSystem:
         context = format_context(docs, max_chars=2000)
 
         # ── Step 6: Generate answer ───────────────────────────
-        intent = classify_intent(query)
+        # Reuse pre-classified intent if available (avoids a second LLM call)
+        intent = pre_intent or classify_intent_llm(query, self.llm)
         prompt = PROMPT_REGISTRY[intent]
         chain = prompt | self.llm | StrOutputParser()
-        kwargs = {'context': context, 'question': query}
+        kwargs = {
+            'context': context,
+            'question': query,
+            'history': generation_history or 'No prior conversation.',
+        }
         if 'order_id' in prompt.input_variables:
             kwargs['order_id'] = order_id or 'not provided'
         if 'days_since_purchase' in prompt.input_variables:
@@ -208,15 +238,20 @@ class OlistRAGSystem:
         self,
         query: str,
         session_id: str = 'default',
+        order_id: str = '',
     ) -> dict:
         t0 = time.time()
         history = memory_store.get_history(session_id)
         full_q = (f"Context:\n{history}\n\nQuery: {query}"
                   if history else query)
 
+        # Inject the ID from the UI directly into the LLM's query
+        if order_id:
+            full_q += f"\n[The user has explicitly provided an ID (Order or Seller): {order_id}]"
+
         result = self.agent.invoke({
             'messages': [HumanMessage(content=full_q)],
-            'order_id': '',
+            'order_id': order_id,
             'intent': '',
             'tool_call_count': 0,
             'escalated': False,
@@ -282,6 +317,9 @@ class OlistRAGSystem:
         query: str,
         order_id: str = '',
         session_id: str = 'default',
+        use_rewrite: bool | None = None,
+        use_mq: bool | None = None,
+        use_comp: bool | None = None,
     ) -> dict:
         """Main entry point — routes to agent or RAG chain."""
         try:
@@ -310,9 +348,16 @@ class OlistRAGSystem:
             # P0 FIX: Sanitize prompt injection
             safe_query = self._sanitize_query(query)
 
-            if self._should_use_agent(safe_query):
-                return self._agent_answer(safe_query, session_id)
-            return self._rag_chain_answer(safe_query, order_id, session_id)
+            # Classify intent ONCE with LLM — reused for both routing and generation
+            intent = classify_intent_llm(safe_query, self.llm)
+
+            if self._should_use_agent(safe_query, order_id, intent):
+                return self._agent_answer(safe_query, session_id, order_id)
+            return self._rag_chain_answer(
+                safe_query, order_id, session_id,
+                use_rewrite, use_mq, use_comp,
+                pre_intent=intent,  # pass through — no double classification
+            )
         except Exception as exc:
             # Graceful fallback — never crash the API
             return {

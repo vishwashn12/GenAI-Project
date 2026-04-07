@@ -2,8 +2,8 @@ import { Route, Routes } from 'react-router-dom'
 import { useTheme } from './lib/ThemeContext'
 import Sidebar from './components/Sidebar'
 import Chat from './pages/Chat'
-import Dashboard from './pages/Dashboard'
-import Insights from './pages/Insights'
+import Operations from './pages/Operations'
+import Sellers from './pages/Sellers'
 import Settings from './pages/Settings'
 
 export default function App() {
@@ -15,8 +15,8 @@ export default function App() {
       <main className="min-h-screen px-4 pb-10 pt-6 sm:px-8 lg:ml-[280px] lg:px-10">
         <Routes>
           <Route path="/" element={<Chat />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/insights" element={<Insights />} />
+          <Route path="/dashboard" element={<Operations />} />
+          <Route path="/insights" element={<Sellers />} />
           <Route path="/settings" element={<Settings />} />
         </Routes>
       </main>

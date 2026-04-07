@@ -1,6 +1,5 @@
 """
 Per-session conversation history with sliding context window.
-Exact replica of Phase 3 Cell 18A.
 """
 from __future__ import annotations
 
@@ -22,7 +21,7 @@ class ConversationMemory:
     def add_turn(
         self, session_id: str, user_query: str, response: str
     ) -> None:
-        """Add one Q&A turn.  Keep only most recent max_turns."""
+        """Add one Q&A turn. Keep only most recent max_turns."""
         self.store[session_id].append({
             'user': user_query,
             'assistant': response,
@@ -32,16 +31,39 @@ class ConversationMemory:
                 -self.max_turns:
             ]
 
-    def get_history(self, session_id: str) -> str:
-        """Return formatted history string for context injection."""
+    def get_history(self, session_id: str, for_retrieval: bool = False) -> str:
+        """
+        Return formatted history string.
+
+        for_retrieval=True  → compact form, only user turns (used to enrich
+                              the search query; no need for full answers)
+        for_retrieval=False → full form with both sides, sent to the LLM
+                              prompt so it can understand references like
+                              "that order", "what about it", "as you said"
+        """
         turns = self.store.get(session_id, [])
         if not turns:
             return ''
+
         lines: list[str] = []
-        for t in turns:
-            lines.append(f"User: {t['user']}")
-            # truncate saves tokens
-            lines.append(f"Assistant: {t['assistant'][:500]}...")
+
+        if for_retrieval:
+            # Just user questions — lightweight, only affects vector search
+            for t in turns:
+                lines.append(f"User: {t['user']}")
+        else:
+            # Full turns for LLM generation context
+            for i, t in enumerate(turns, 1):
+                lines.append(f"[Turn {i}]")
+                lines.append(f"Customer: {t['user']}")
+                # Smart truncation: keep first 300 chars of answer
+                # That captures the key info without flooding tokens
+                answer_preview = t['assistant'][:300]
+                if len(t['assistant']) > 300:
+                    answer_preview += '…'
+                lines.append(f"Agent: {answer_preview}")
+                lines.append('')
+
         return '\n'.join(lines)
 
     def clear(self, session_id: str) -> None:

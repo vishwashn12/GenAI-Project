@@ -6,26 +6,33 @@ import Loader from '../components/Loader'
 import { chatWithSupport } from '../lib/api'
 
 const STORAGE_KEY = 'supportops_chat_history'
+const SESSION_KEY = 'supportops_session_id'
+
+/** Generate a stable session ID per browser tab. New tab = new session. */
+function getOrCreateSessionId() {
+  let id = sessionStorage.getItem(SESSION_KEY)
+  if (!id) {
+    id = `session-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`
+    sessionStorage.setItem(SESSION_KEY, id)
+  }
+  return id
+}
 
 export default function Chat() {
   const { isDark } = useTheme()
   const [query, setQuery] = useState('')
   const [orderId, setOrderId] = useState('')
-  const [messages, setMessages] = useState([])
+  const [messages, setMessages] = useState(() => {
+    try {
+      const cached = localStorage.getItem(STORAGE_KEY)
+      return cached ? JSON.parse(cached) : []
+    } catch {
+      return []
+    }
+  })
   const [loading, setLoading] = useState(false)
   const scrollRef = useRef(null)
   const inputRef = useRef(null)
-
-  useEffect(() => {
-    const cached = localStorage.getItem(STORAGE_KEY)
-    if (!cached) return
-    try {
-      const parsed = JSON.parse(cached)
-      if (Array.isArray(parsed)) setMessages(parsed)
-    } catch {
-      localStorage.removeItem(STORAGE_KEY)
-    }
-  }, [])
 
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(messages))
@@ -34,9 +41,13 @@ export default function Chat() {
     }
   }, [messages, loading])
 
+  const sessionId = getOrCreateSessionId()
+
   const clearChat = () => {
     setMessages([])
     localStorage.removeItem(STORAGE_KEY)
+    // also reset the backend session so memory starts fresh
+    sessionStorage.removeItem(SESSION_KEY)
   }
 
   const submitQuery = async (event) => {
@@ -56,7 +67,7 @@ export default function Chat() {
     setLoading(true)
 
     try {
-      const response = await chatWithSupport({ query: trimmed, order_id: orderId.trim() })
+      const response = await chatWithSupport({ query: trimmed, order_id: orderId.trim(), session_id: sessionId })
       setMessages((prev) => [...prev, {
         id: `a-${Date.now()}`,
         role: 'assistant',
@@ -177,7 +188,7 @@ export default function Chat() {
             <input
               value={orderId}
               onChange={(e) => setOrderId(e.target.value)}
-              placeholder="Order ID"
+              placeholder="Order/Seller ID"
               className={`w-28 shrink-0 rounded-xl border px-3 py-2.5 text-sm outline-none transition-colors sm:w-36 ${
                 isDark
                   ? 'border-surface-700 bg-surface-800 text-surface-200 placeholder-surface-600 focus:border-brand-500/50 focus:ring-1 focus:ring-brand-500/20'

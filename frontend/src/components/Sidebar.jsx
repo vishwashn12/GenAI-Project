@@ -1,11 +1,11 @@
-import { BarChart3, MessageSquareText, Moon, Settings, Sparkles, Sun, Zap } from 'lucide-react'
+import { BarChart3, MessageSquareText, Moon, Settings, ShoppingBag, Sun, Zap } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
 import { useTheme } from '../lib/ThemeContext'
 
 const navItems = [
   { to: '/', label: 'Chat', icon: MessageSquareText, desc: 'AI Assistant' },
-  { to: '/dashboard', label: 'Analytics', icon: BarChart3, desc: 'Performance' },
-  { to: '/insights', label: 'Insights', icon: Sparkles, desc: 'System Data' },
+  { to: '/dashboard', label: 'Operations', icon: BarChart3, desc: 'Platform Health' },
+  { to: '/insights', label: 'Sellers', icon: ShoppingBag, desc: 'Seller Intelligence' },
   { to: '/settings', label: 'Settings', icon: Settings, desc: 'Configure' },
 ]
 
