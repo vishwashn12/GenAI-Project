@@ -46,8 +46,10 @@ export default function Chat() {
   const clearChat = () => {
     setMessages([])
     localStorage.removeItem(STORAGE_KEY)
-    // also reset the backend session so memory starts fresh
+    // Reset backend session so memory starts fresh
     sessionStorage.removeItem(SESSION_KEY)
+    // Reset pipeline settings to defaults for the new chat
+    sessionStorage.removeItem('supportops_settings')
   }
 
   const submitQuery = async (event) => {

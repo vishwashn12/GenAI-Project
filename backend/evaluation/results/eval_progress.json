@@ -1,0 +1,1245 @@
+[
+  {
+    "id": 1,
+    "question": "Where is my order?",
+    "order_id": "e481f51cbdc54678b7cc49136f2d6af7",
+    "expected_intent": "order_status",
+    "ground_truth": "The order has been delivered. The system should provide the delivery date, payment details, and confirm successful delivery.",
+    "answer": "Your order e481f51cbdc54678b7cc49136f2d6af7 has been delivered on time. The estimated delivery date was October 18, 2017, but it was actually delivered on October 10, 2017. The payment method used was a credit card for R$18.12. If you have any other questions or concerns, please let me know.",
+    "contexts": [
+      "Your order e481f51cbdc54678b7cc49136f2d6af7 has been delivered on time. The estimated delivery date was October 18, 2017, but it was actually delivered on October 10, 2017. The payment method used was a credit card for R$18.12. If you have any other questions or concerns, please let me know."
+    ],
+    "latency": 19.15,
+    "mode": "agent",
+    "classified_intent": "order_status",
+    "docs_retrieved": 0,
+    "scores": {
+      "faithfulness": 0.8,
+      "answer_relevancy": 0.5149,
+      "answer_correctness": 0.6221,
+      "semantic_similarity": 0.6424,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 2,
+    "question": "Can you check the status of my order?",
+    "order_id": "203096f03d82e0dffbc41ebc2e2bcfb7",
+    "expected_intent": "order_status",
+    "ground_truth": "The order was delivered late. The system should acknowledge the delay, state how many days late it was, and provide the delivery details.",
+    "answer": "I've checked the status of your order. Unfortunately, it was delivered 11 days late. I've also noted that the payment type was boleto and the payment value was R$118.86. The category of the order was health_beauty. \n\nIf you're not satisfied with the delivery time, I can look into this further for you. Would you like me to search the knowledge base for information on late deliveries?",
+    "contexts": [
+      "I've checked the status of your order. Unfortunately, it was delivered 11 days late. I've also noted that the payment type was boleto and the payment value was R$118.86. The category of the order was health_beauty. \n\nIf you're not satisfied with the delivery time, I can look into this further for you. Would you like me to search the knowledge base for information on late deliveries?"
+    ],
+    "latency": 15.41,
+    "mode": "agent",
+    "classified_intent": "seller_issue",
+    "docs_retrieved": 0,
+    "scores": {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.0,
+      "answer_correctness": 0.3767,
+      "semantic_similarity": 0.6497,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 3,
+    "question": "Has my order been shipped yet?",
+    "order_id": "53cdb2fc8bc7dce0b6741e2150273451",
+    "expected_intent": "order_status",
+    "ground_truth": "The order has been delivered. The system should confirm delivery, provide the delivery date and order details.",
+    "answer": "Your order has been delivered on time. The estimated delivery date was August 13th, 2018, but it was actually delivered on August 7th, 2018. You paid for the order using a boleto for R$141.46. If you have any other questions or concerns, please don't hesitate to ask.",
+    "contexts": [
+      "Your order has been delivered on time. The estimated delivery date was August 13th, 2018, but it was actually delivered on August 7th, 2018. You paid for the order using a boleto for R$141.46. If you have any other questions or concerns, please don't hesitate to ask."
+    ],
+    "latency": 14.67,
+    "mode": "agent",
+    "classified_intent": "order_status",
+    "docs_retrieved": 0,
+    "scores": {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7235,
+      "answer_correctness": 0.4122,
+      "semantic_similarity": 0.558,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 4,
+    "question": "I placed an order and want to know when it will arrive",
+    "order_id": "fbf9ac61453ac646ce8ad9783d7d0af6",
+    "expected_intent": "order_status",
+    "ground_truth": "The order was delivered but late. The system should provide the estimated and actual delivery dates and explain the delay.",
+    "answer": "I apologize for the delay in your order delivery. According to our records, your order was supposed to be delivered on 2018-03-12, but it was actually delivered on 2018-03-21, which is 9 days late. I'm sorry for the inconvenience this may have caused.\n\nIf you have any further questions or concerns, please don't hesitate to ask.",
+    "contexts": [
+      "I apologize for the delay in your order delivery. According to our records, your order was supposed to be delivered on 2018-03-12, but it was actually delivered on 2018-03-21, which is 9 days late. I'm sorry for the inconvenience this may have caused.\n\nIf you have any further questions or concerns, please don't hesitate to ask."
+    ],
+    "latency": 16.13,
+    "mode": "agent",
+    "classified_intent": "seller_issue",
+    "docs_retrieved": 0,
+    "scores": {
+      "faithfulness": 0.8571,
+      "answer_relevancy": 0.5897,
+      "answer_correctness": 0.6196,
+      "semantic_similarity": 0.7135,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 5,
+    "question": "Track my package please",
+    "order_id": "6ea2f835b4556291ffdc53fa0b3b95e8",
+    "expected_intent": "order_status",
+    "ground_truth": "The order was delivered late. The system should provide tracking information including estimated vs actual delivery dates.",
+    "answer": "Since the order has been delivered, but was 7 days late, I'd like to offer you a gesture of goodwill for the inconvenience caused. We'll provide you with a 10% discount on your next purchase.\n\nIf you have any further questions or concerns, please don't hesitate to reach out.",
+    "contexts": [
+      "Since the order has been delivered, but was 7 days late, I'd like to offer you a gesture of goodwill for the inconvenience caused. We'll provide you with a 10% discount on your next purchase.\n\nIf you have any further questions or concerns, please don't hesitate to reach out."
+    ],
+    "latency": 16.93,
+    "mode": "agent",
+    "classified_intent": "order_status",
+    "docs_retrieved": 0,
+    "scores": {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.2599,
+      "answer_correctness": 0.2773,
+      "semantic_similarity": 0.3594,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 6,
+    "question": "What happened to my purchase?",
+    "order_id": "e481f51cbdc54678b7cc49136f2d6af7",
+    "expected_intent": "order_status",
+    "ground_truth": "The order has been successfully delivered. The system should confirm the delivery status and provide order details.",
+    "answer": "Since the order has been delivered on time, and there are no issues reported, I'm happy to confirm that your purchase was successful. If you have any other questions or concerns, please don't hesitate to ask.\n\nNext step: If you have any other questions or concerns, please feel free to ask.",
+    "contexts": [
+      "Since the order has been delivered on time, and there are no issues reported, I'm happy to confirm that your purchase was successful. If you have any other questions or concerns, please don't hesitate to ask.\n\nNext step: If you have any other questions or concerns, please feel free to ask."
+    ],
+    "latency": 16.43,
+    "mode": "agent",
+    "classified_intent": "seller_issue",
+    "docs_retrieved": 0,
+    "scores": {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6055,
+      "answer_correctness": 0.4301,
+      "semantic_similarity": 0.5206,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 7,
+    "question": "I want to know about my order status",
+    "order_id": "",
+    "expected_intent": "order_status",
+    "ground_truth": "Without an order ID, the system should ask the customer to provide their order ID to look up the status.",
+    "answer": "I'm so sorry to hear that you're concerned about your order status. I'm here to help you get an update on your order.\n\nUnfortunately, you haven't provided your order ID, so I'll need a bit more information from you to look into this further. Can you please provide your order ID so I can check on the status of your order?\n\nOnce I have your order ID, I'll be happy to provide you with the current delivery status, any delays, and an estimated resolution timeline.\n\nPlease provide your order ID so I can assist you further.\n\nNext step: Please provide your order ID so I can check on the status of your order.",
+    "contexts": [
+      "Support ticket (general inquiry). Priority: low. Channel: email. Customer query: Can you tell me the status of order db033c99784b0da2569c40df1e7001d7? I placed it on August 20, 2018 and have not received any update. Resolved by: Thank you for reaching out. Your order is currently in status: delivere",
+      "Support ticket (severe delay). Priority: high. Channel: email. Customer query: Can you tell me the status of order 7c363fbfb4e41c26246ea6097cd275bf? I placed it on April 17, 2018 and have not received any update. Resolved by: Thank you for reaching out. Your order is currently in status: delivered",
+      ". Delivery status: LATE by 25 days. Customer feedback: I canceled that order, the email in question was not supposed to arrive and I have 2 other pending orders, with late delivery, without any support from Lannister.",
+      "Order ID: 223f078a123f6e7b1374cc086dabfa69. Category: furniture_decor. Review score: 1/5. Delivery status: on time. Customer feedback: I did not receive the complete order. My purchase was 3 pending and only one came in the box, but the invoice came from the three products.",
+      "Order ID: 19428d94d47ebaa715faa60f63186de6. Category: costruction_tools_tools. Review score: 5/5. Delivery status: on time. Customer feedback: Although I have a pending product since December 2017, this other purchase has arrived before the deadline"
+    ],
+    "latency": 18.88,
+    "mode": "rag_chain",
+    "classified_intent": "order_status",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.7778,
+      "answer_relevancy": 0.0,
+      "answer_correctness": 0.562,
+      "semantic_similarity": 0.448,
+      "response_groundedness": 0.5
+    }
+  },
+  {
+    "id": 8,
+    "question": "When will my order be delivered?",
+    "order_id": "",
+    "expected_intent": "order_status",
+    "ground_truth": "The system should ask the customer for their order ID to check expected delivery date.",
+    "answer": "I'm so sorry to hear that you're experiencing a delay with your order. I'm here to help you track it down and get an update on the delivery status.\n\nUnfortunately, you haven't provided your order ID, so I'll need to ask you to share it with me so I can look into it further. Please provide your order ID, and I'll do my best to give you an update on the current delivery status.\n\nOnce I have your order ID, I'll be able to check on the status of your order and provide you with an estimated delivery date. If your order is delayed, I'll also let you know how many days it's been delayed and provide you with information on our delivery policy.\n\nPlease provide your order ID, and I'll get started on looking into it for you.\n\nNext step: Please provide your order ID so I can assist you further.",
+    "contexts": [
+      "Support ticket (delivery delay). Priority: medium. Channel: email. Customer query: I placed an order on April 26, 2018 and the estimated delivery was May 17, 2018. Today is August 31, 2018 and I have not received anything. Order ID: bed62216bd8e10b5b9e22eee2563c39b. Please help. Resolved by: We have",
+      "Support ticket (delivery delay). Priority: medium. Channel: app. Customer query: I placed an order on July 01, 2017 and the estimated delivery was August 04, 2017. Today is August 31, 2018 and I have not received anything. Order ID: 9e7147a6ff3d5299da2672e1c64c9c49. Please help. Resolved by: We have",
+      "Support ticket (delivery delay). Priority: medium. Channel: phone. Customer query: I placed an order on November 22, 2017 and the estimated delivery was December 13, 2017. Today is August 31, 2018 and I have not received anything. Order ID: 4ab89d9dbd3924ff720ba734b538956e. Please help",
+      "Order ID: fb66173878dcc988e4e3e1151901b298. Category: baby. Review score: 1/5. Delivery status: LATE by 6 days. Customer feedback: I want to know when I will receive my order.",
+      "Order ID: 50428fc6ef58fd5cebf433ef7f06be0d. Category: nan. Review score: 1/5. Delivery status: on time. Customer feedback: I wanted to know when the product will be delivered, as it has already been paid and nothing so far...",
+      "Order ID: 2d824bac66ec7467745b2defcee22c1e. Category: health_beauty. Review score: 2/5. Delivery status: LATE by 22 days. Customer feedback: I would like to know when my product arrives?"
+    ],
+    "latency": 17.25,
+    "mode": "rag_chain",
+    "classified_intent": "order_status",
+    "docs_retrieved": 6,
+    "scores": {
+      "faithfulness": 0.4444,
+      "answer_relevancy": 0.0,
+      "answer_correctness": 0.5125,
+      "semantic_similarity": 0.55,
+      "response_groundedness": 0.0
+    }
+  },
+  {
+    "id": 9,
+    "question": "I ordered something last week, is it on the way?",
+    "order_id": "",
+    "expected_intent": "order_status",
+    "ground_truth": "Without an order ID, the system should request the order ID to check shipping status.",
+    "answer": "I understand your frustration with the delay in receiving your order. I'm here to help you track the status of your order.\n\nUnfortunately, I don't have enough information in my records to answer this precisely, as you haven't provided your order ID. However, I can guide you through the process to find the status of your order.\n\nTo track your order, I'll need you to provide your order ID. You can find it on your order confirmation email or on your Olist account. Once I have the order ID, I can check the current delivery status and provide you with an estimated resolution timeline.\n\nPlease provide your order ID so I can assist you further.\n\nNext step: Please provide your order ID so I can track the status of your order.",
+    "contexts": [
+      "Now with an order placed in the second week of March and it still hasn't arrived",
+      "Within another week the same still\nIt was being prepared for shipment.",
+      "Product complaint — Electronics. Rating: 2.0/5. Issue type: general_complaint. Customer title: Last week 4 stars this week 2. Review: last week when I bought this at a local retailer for way less than on the internet I was thrilled cause it was cool",
+      "An important note is that the order tracking was out of date when we received the product.",
+      "Product complaint — Electronics. Rating: 1.0/5. Issue type: general_complaint. Customer title: So far the drive is problematic.. Review: Received the drive last week from Amazon. Overall, it's a simple solution to backing up data and in my case, storing nearly 10,000 mp3 files (legit) ripped from my",
+      "Product complaint — Electronics. Rating: 1.0/5. Issue type: general_complaint. Customer title: Was good while it last. Review: This was a good part for apart 1 week.. then it burned up.. So will have to look for something better.."
+    ],
+    "latency": 15.4,
+    "mode": "rag_chain",
+    "classified_intent": "order_status",
+    "docs_retrieved": 6,
+    "scores": {
+      "faithfulness": 0.4545,
+      "answer_relevancy": 0.0,
+      "answer_correctness": 0.4986,
+      "semantic_similarity": 0.4154,
+      "response_groundedness": 0.5
+    }
+  },
+  {
+    "id": 10,
+    "question": "My order number is 203096f03d82e0dffbc41ebc2e2bcfb7, what is the status?",
+    "order_id": "203096f03d82e0dffbc41ebc2e2bcfb7",
+    "expected_intent": "order_status",
+    "ground_truth": "The order was delivered but arrived late. The system should provide full delivery details and acknowledge the delay.",
+    "answer": "Based on our delivery policies, it seems that there was a severe delay in the delivery of your order. According to our records, the estimated delivery date was September 28th, but the order was actually delivered on October 9th, which is 11 days late. I apologize for the inconvenience this has caused.\n\nAs a next step, I would like to offer you a discount on your next purchase as a gesture of goodwill for the delay. Additionally, I will make sure to pass on your feedback to our logistics team to ensure that we can improve our delivery times in the future.\n\nIf you have any further questions or concerns, please don't hesitate to reach out.",
+    "contexts": [
+      "Based on our delivery policies, it seems that there was a severe delay in the delivery of your order. According to our records, the estimated delivery date was September 28th, but the order was actually delivered on October 9th, which is 11 days late. I apologize for the inconvenience this has caused.\n\nAs a next step, I would like to offer you a discount on your next purchase as a gesture of goodwill for the delay. Additionally, I will make sure to pass on your feedback to our logistics team to ensure that we can improve our delivery times in the future.\n\nIf you have any further questions or concerns, please don't hesitate to reach out."
+    ],
+    "latency": 29.84,
+    "mode": "agent",
+    "classified_intent": "seller_issue",
+    "docs_retrieved": 0,
+    "scores": {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.4643,
+      "answer_correctness": 0.4828,
+      "semantic_similarity": 0.6455,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 11,
+    "question": "My order is late, it hasn't arrived yet",
+    "order_id": "203096f03d82e0dffbc41ebc2e2bcfb7",
+    "expected_intent": "delivery_issue",
+    "ground_truth": "The system should acknowledge the delivery delay, provide the estimated vs actual delivery date, and offer a resolution or next steps.",
+    "answer": "I apologize for the delay in receiving your order. According to our records, your order was delivered 11 days late. I've checked the estimated and actual delivery dates, and it seems that there was a significant delay.\n\nAs a gesture of goodwill, I'd like to offer you a 10% discount on your next purchase. Please let me know if you'd like to proceed with this offer.\n\nIf you have any further concerns or would like to discuss this issue further, please don't hesitate to reach out.",
+    "contexts": [
+      "I apologize for the delay in receiving your order. According to our records, your order was delivered 11 days late. I've checked the estimated and actual delivery dates, and it seems that there was a significant delay.\n\nAs a gesture of goodwill, I'd like to offer you a 10% discount on your next purchase. Please let me know if you'd like to proceed with this offer.\n\nIf you have any further concerns or would like to discuss this issue further, please don't hesitate to reach out."
+    ],
+    "latency": 15.92,
+    "mode": "agent",
+    "classified_intent": "delivery_issue",
+    "docs_retrieved": 0,
+    "scores": {
+      "faithfulness": 0.8889,
+      "answer_relevancy": 0.6129,
+      "answer_correctness": 0.6428,
+      "semantic_similarity": 0.4537,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 12,
+    "question": "My package never came",
+    "order_id": "",
+    "expected_intent": "delivery_issue",
+    "ground_truth": "The system should empathize with the customer and ask for the order ID to investigate the delivery issue.",
+    "answer": "I'm so sorry to hear that your package never arrived. I'm here to help you resolve this issue as quickly as possible.\n\nUnfortunately, I don't have enough information in my records to answer this precisely, including your order ID. Let me escalate this to a specialist who can help you further.\n\nPlease provide your order ID so I can look into this matter further. This will allow me to check the status of your package and provide you with a more accurate update.\n\nNext step: Please provide your order ID so I can assist you further.",
+    "contexts": [
+      "Product complaint — Electronics. Rating: 1.0/5. Issue type: general_complaint. Customer title: never got them. Review: Postal delivery never got to me. Post office insists they delivered but I never got the package. Reported to Amazon and got credit for purchase without any hassle. Cables never show",
+      "Support ticket (package lost). Priority: critical. Channel: email. Customer query: Order c9843bbe46c6789de67e9b2ca521d5d2 purchased on May 11, 2018: carrier says delivered but I never received it. I am requesting a full refund or replacement. Resolved by: After investigation, we confirm the package ",
+      "but this time I had and my product so far has not arrived.",
+      "Support ticket (package lost). Priority: critical. Channel: email. Customer query: I cannot locate my package for order 77de2b6b4ddbe44561245ee168593b5e. The tracking has not updated in 1 days. Please help — order value was R$98.51. Resolved by: We are sorry your package appears to be lost. We have ",
+      "Support ticket (package lost). Priority: critical. Channel: chat. Customer query: I cannot locate my package for order 076008aa37f0393fff972b8b0121fd94. The tracking has not updated in 1 days. Please help — order value was R$258.1. Resolved by: After investigation, we confirm the package is lost in ",
+      "Support ticket (package lost). Priority: critical. Channel: app. Customer query: I cannot locate my package for order 3c404e64aaee40b3b597aafff9795b4a. The tracking has not updated in 1 days. Please help — order value was R$261.97. Resolved by: After investigation, we confirm the package is lost in "
+    ],
+    "latency": 15.86,
+    "mode": "rag_chain",
+    "classified_intent": "delivery_issue",
+    "docs_retrieved": 6,
+    "scores": {
+      "faithfulness": 0.2857,
+      "answer_relevancy": 0.0,
+      "answer_correctness": 0.2594,
+      "semantic_similarity": 0.4923,
+      "response_groundedness": 0.25
+    }
+  },
+  {
+    "id": 13,
+    "question": "I've been waiting for weeks and still haven't received my order",
+    "order_id": "fbf9ac61453ac646ce8ad9783d7d0af6",
+    "expected_intent": "delivery_issue",
+    "ground_truth": "The system should acknowledge the long wait, check the delivery status, and provide information about the delay with a resolution path.",
+    "answer": "I apologize for the delay in receiving your order. According to our records, your order fbf9ac61453ac646ce8ad9783d7d0af6 was delivered on 2018-03-21, which is 9 days later than the estimated delivery date.\n\nI'm going to look into this further to see what might have caused the delay. Can you please confirm that you have received your order and that it is in good condition? If you have any issues with the order, please let me know and I'll be happy to assist you further.\n\nNext step: I'll check the shipping carrier's tracking information to see if there were any issues with the delivery.",
+    "contexts": [
+      "I apologize for the delay in receiving your order. According to our records, your order fbf9ac61453ac646ce8ad9783d7d0af6 was delivered on 2018-03-21, which is 9 days later than the estimated delivery date.\n\nI'm going to look into this further to see what might have caused the delay. Can you please confirm that you have received your order and that it is in good condition? If you have any issues with the order, please let me know and I'll be happy to assist you further.\n\nNext step: I'll check the shipping carrier's tracking information to see if there were any issues with the delivery."
+    ],
+    "latency": 15.24,
+    "mode": "agent",
+    "classified_intent": "delivery_issue",
+    "docs_retrieved": 0,
+    "scores": {
+      "faithfulness": 0.8571,
+      "answer_relevancy": 0.5134,
+      "answer_correctness": 0.2577,
+      "semantic_similarity": 0.531,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 14,
+    "question": "The estimated delivery date has passed",
+    "order_id": "6ea2f835b4556291ffdc53fa0b3b95e8",
+    "expected_intent": "delivery_issue",
+    "ground_truth": "The system should confirm that delivery is overdue, provide the original estimated date, and offer next steps such as contacting the seller or filing a complaint.",
+    "answer": "It seems that the issue is with the delivery delay. I've checked the order status and seller information, but I couldn't find any further details.\n\nTo resolve this issue, I would like to offer you a discount on your next purchase as a gesture of goodwill. Additionally, I can provide you with a prepaid return shipping label so that you can return the item and receive a full refund.\n\nPlease let me know if this is acceptable to you, and I will send you the prepaid return shipping label and a discount code for your next purchase.",
+    "contexts": [
+      "It seems that the issue is with the delivery delay. I've checked the order status and seller information, but I couldn't find any further details.\n\nTo resolve this issue, I would like to offer you a discount on your next purchase as a gesture of goodwill. Additionally, I can provide you with a prepaid return shipping label so that you can return the item and receive a full refund.\n\nPlease let me know if this is acceptable to you, and I will send you the prepaid return shipping label and a discount code for your next purchase."
+    ],
+    "latency": 26.15,
+    "mode": "agent",
+    "classified_intent": "seller_issue",
+    "docs_retrieved": 0,
+    "scores": {
+      "faithfulness": 0.875,
+      "answer_relevancy": 0.5854,
+      "answer_correctness": 0.2829,
+      "semantic_similarity": 0.5863,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 15,
+    "question": "My parcel hasn't shown up",
+    "order_id": "",
+    "expected_intent": "delivery_issue",
+    "ground_truth": "The system should ask for the order ID to look up delivery status and investigate the missing parcel.",
+    "answer": "I'm so sorry to hear that your parcel hasn't shown up yet. I'm here to help you track it down. Unfortunately, you haven't provided your order ID, so I'll need to ask you to provide that so I can look into it further.\n\nOnce I have your order ID, I can check the current delivery status and provide you with an update. If your parcel is delayed, I can also let you know the estimated delivery date and any relevant policies that may apply.\n\nPlease provide your order ID, and I'll do my best to assist you.\n\nNext step: Please provide your order ID so I can look into your delivery status.",
+    "contexts": [
+      ". These problems have shown up at about 18 months on all of these models. Since Canon hasn't fixed the problem in over 3 years since it first started showing up, I wouldn't want to bet that the new SD300 camera won't also turn into a paperweight after 18 months.Oh - I forgot to mention that Canon wi",
+      "Support ticket (package lost). Priority: critical. Channel: phone. Customer query: I cannot locate my package for order 46dba1d22a6ee9cb6200c1cb899f583c. The tracking has not updated in 1 days. Please help — order value was R$128.1. Resolved by: After investigation, we confirm the package is lost in",
+      "Support ticket (package lost). Priority: critical. Channel: chat. Customer query: I cannot locate my package for order 076008aa37f0393fff972b8b0121fd94. The tracking has not updated in 1 days. Please help — order value was R$258.1. Resolved by: After investigation, we confirm the package is lost in ",
+      "Support ticket (package lost). Priority: critical. Channel: app. Customer query: I cannot locate my package for order dfee867c0e46410af48a712d2a4fa179. The tracking has not updated in 1 days. Please help — order value was R$54.1. Resolved by: After investigation, we confirm the package is lost in tr",
+      "Product complaint — Electronics. Rating: 1.0/5. Issue type: damaged_missing. Customer title: Missing Shipment. Review: This item was shipped on Dec 21st but has not arrived at the shipper UPS as of the 26th. There appears to be no method to contact Amazon concerning the missing shipment. The paperwo",
+      "Support ticket (package lost). Priority: critical. Channel: email. Customer query: I cannot locate my package for order f05b87cae9d521c780bc3dfc281ca892. The tracking has not updated in 1 days. Please help — order value was R$114.98. Resolved by: After investigation, we confirm the package is lost i"
+    ],
+    "latency": 16.03,
+    "mode": "rag_chain",
+    "classified_intent": "delivery_issue",
+    "docs_retrieved": 6,
+    "scores": {
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.6144,
+      "answer_correctness": 0.3343,
+      "semantic_similarity": 0.7373,
+      "response_groundedness": 0.0
+    }
+  },
+  {
+    "id": 16,
+    "question": "Still waiting for my delivery, it's really overdue now",
+    "order_id": "",
+    "expected_intent": "delivery_issue",
+    "ground_truth": "The system should empathize and request the order ID to check delivery status and delays.",
+    "answer": "I can sense your frustration, and I'm here to help. I've checked our system, and I don't have enough information in my records to answer this precisely. Let me escalate this to a specialist who can help you further. They will be able to look into the specific details of your order and provide a more accurate update on the delivery status.\n\nPlease hold for a moment while I transfer you to a specialist. They will be able to assist you with your query.",
+    "contexts": [
+      ". I'm still waiting for delivery within the stated time frame.",
+      "Support ticket (delivery delay). Priority: medium. Channel: chat. Customer query: My package is overdue by 3 days. Order number 90e2de5e3c7e68c82623b0bdcfc301b4. I need this urgently — what is the current status? Resolved by: We have contacted the logistics partner about your order. Delays of up to ",
+      "Support ticket (delivery delay). Priority: medium. Channel: app. Customer query: My package is overdue by 1 days. Order number 21f09ddab3452c7541fdd8b251645918. I need this urgently — what is the current status? Resolved by: We have contacted the logistics partner about your order. Delays of up to 7",
+      "Support ticket (delivery delay). Priority: medium. Channel: email. Customer query: My package is overdue by 1 days. Order number a89ebfafe4d5465a7f7d00cb6fb2537a. I need this urgently — what is the current status? Resolved by: We have contacted the logistics partner about your order. Delays of up to",
+      "Support ticket (delivery delay). Priority: medium. Channel: phone. Customer query: My package is overdue by 1 days. Order number b60e4bb897c3faf7417e11850072fab0. I need this urgently — what is the current status? Resolved by: We have contacted the logistics partner about your order. Delays of up to",
+      "Order ID: 9841f5f29be60e9a4686d0bd4593ed6f. Category: electronics. Review score: 1/5. Delivery status: LATE by 5 days. Customer feedback: overdue product."
+    ],
+    "latency": 16.59,
+    "mode": "rag_chain",
+    "classified_intent": "delivery_issue",
+    "docs_retrieved": 6,
+    "scores": {
+      "faithfulness": 0.1667,
+      "answer_relevancy": 0.0,
+      "answer_correctness": 0.2798,
+      "semantic_similarity": 0.5738,
+      "response_groundedness": 0.5
+    }
+  },
+  {
+    "id": 17,
+    "question": "delivery was supposed to arrive last week but nothing",
+    "order_id": "203096f03d82e0dffbc41ebc2e2bcfb7",
+    "expected_intent": "delivery_issue",
+    "ground_truth": "The system should check the order details, confirm the delay, state the number of days late, and offer resolution options.",
+    "answer": "I apologize for the delay in your order delivery. According to our records, your order was supposed to arrive on September 28th, but it was delivered on October 9th, which is 11 days late.\n\nI've checked the order details, and it seems that the payment was made through boleto, and the total value was R$118.86. The category of the product is health and beauty.\n\nI'm going to look into this further to see what might have caused the delay. Can you please confirm if you have received the order and if it's in good condition?",
+    "contexts": [
+      "I apologize for the delay in your order delivery. According to our records, your order was supposed to arrive on September 28th, but it was delivered on October 9th, which is 11 days late.\n\nI've checked the order details, and it seems that the payment was made through boleto, and the total value was R$118.86. The category of the product is health and beauty.\n\nI'm going to look into this further to see what might have caused the delay. Can you please confirm if you have received the order and if it's in good condition?"
+    ],
+    "latency": 17.06,
+    "mode": "agent",
+    "classified_intent": "seller_issue",
+    "docs_retrieved": 0,
+    "scores": {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7002,
+      "answer_correctness": 0.2964,
+      "semantic_similarity": 0.4795,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 18,
+    "question": "I never received my package, what do I do?",
+    "order_id": "",
+    "expected_intent": "delivery_issue",
+    "ground_truth": "The system should guide the customer on next steps for undelivered packages and ask for the order ID to investigate.",
+    "answer": "I'm so sorry to hear that you're experiencing issues with your package. I'm here to help you resolve this as quickly as possible.\n\nUnfortunately, you haven't provided your order ID, so I don't have any information about your specific order. However, I can guide you through the general process.\n\nIf you haven't received your package, it's possible that it may be lost in transit. In such cases, we initiate a formal investigation with the carrier to locate the package. If the package cannot be located, we process a full refund.\n\nTo proceed, I need to request your order ID so I can look into this further. Please provide your order ID, and I'll do my best to assist you.\n\nNext step: Please provide your order ID so I can investigate this further.",
+    "contexts": [
+      "Support ticket (package lost). Priority: critical. Channel: email. Customer query: Order dc6b76e937308e88a3464d0f4352b959 purchased on October 21, 2017: carrier says delivered but I never received it. I am requesting a full refund or replacement. Resolved by: After investigation, we confirm the pack",
+      "Support ticket (package lost). Priority: critical. Channel: email. Customer query: Order b0f7f772e95fb0f8845c40700290a813 purchased on March 16, 2018: carrier says delivered but I never received it. I am requesting a full refund or replacement. Resolved by: After investigation, we confirm the packag",
+      "I received the product on time, however I did not receive the correct product. How should I proceed? I want to return it as it is not what I ordered and paid for.",
+      ". Resolved by: We are sorry your package appears to be lost. We have initiated a formal investigation with the carrier. A full refund of R$55.09 will be processed within 5-7 business days if the package cannot be located.",
+      "Order ID: 7ac8109e735f29d8982f4503586fe59f. Category: computers_accessories. Review score: 3/5. Delivery status: LATE by 25 days. Customer feedback: So I can't pick up the package at the Post Office, what do I do now? to get it back",
+      "Support ticket (package lost). Priority: critical. Channel: chat. Customer query: I cannot locate my package for order 794651af98ca9412aa91961e14c0a796. The tracking has not updated in 1 days. Please help — order value was R$35.0. Resolved by: After investigation, we confirm the package is lost in t"
+    ],
+    "latency": 17.67,
+    "mode": "rag_chain",
+    "classified_intent": "delivery_issue",
+    "docs_retrieved": 6,
+    "scores": {
+      "faithfulness": 0.375,
+      "answer_relevancy": 0.6596,
+      "answer_correctness": 0.6653,
+      "semantic_similarity": 0.6613,
+      "response_groundedness": 0.75
+    }
+  },
+  {
+    "id": 19,
+    "question": "I want a refund for my order",
+    "order_id": "e481f51cbdc54678b7cc49136f2d6af7",
+    "expected_intent": "refund_request",
+    "ground_truth": "The system should check the order status and explain refund eligibility based on the return policy, including processing timeframes.",
+    "answer": "Based on the information provided, it appears that you are eligible for a full refund since the product arrived in good condition and you haven't tested it yet. However, please note that you need to return the product within the 7-day window in its original condition to be eligible for a full refund.\n\nTo proceed with the refund, please follow these steps:\n\n1. Carefully package the product in its original condition, including any accessories or packaging materials.\n2. Ship the product back to us within the next 3 days. You can use a trackable shipping method to ensure the product reaches us safely.\n3. Once we receive the product, we will process a full refund to your original payment method.\n\nIf you have any further questions or concerns, please don't hesitate to reach out. We're here to help.\n\nPlease confirm that you have received this information and are ready to proceed with the refund.",
+    "contexts": [
+      "Based on the information provided, it appears that you are eligible for a full refund since the product arrived in good condition and you haven't tested it yet. However, please note that you need to return the product within the 7-day window in its original condition to be eligible for a full refund.\n\nTo proceed with the refund, please follow these steps:\n\n1. Carefully package the product in its original condition, including any accessories or packaging materials.\n2. Ship the product back to us within the next 3 days. You can use a trackable shipping method to ensure the product reaches us safely.\n3. Once we receive the product, we will process a full refund to your original payment method.\n\nIf you have any further questions or concerns, please don't hesitate to reach out. We're here to help.\n\nPlease confirm that you have received this information and are ready to proceed with the refund."
+    ],
+    "latency": 20.83,
+    "mode": "agent",
+    "classified_intent": "refund_request",
+    "docs_retrieved": 0,
+    "scores": {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6665,
+      "answer_correctness": 0.2362,
+      "semantic_similarity": 0.5447,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 20,
+    "question": "Can I get my money back?",
+    "order_id": "",
+    "expected_intent": "refund_request",
+    "ground_truth": "The system should explain the refund policy and conditions for eligibility, and ask for order details.",
+    "answer": "I understand that you're frustrated about your purchase, and I'm here to help you with your refund request. However, I need to clarify a few things to assist you better.\n\nTo process your refund, I'll need to know more about your order, such as the order ID and the date of purchase. Unfortunately, you haven't provided that information yet. \n\nPlease provide me with your order ID and the date of purchase so I can look into your case further. Once I have that information, I can check if you're eligible for a refund based on our platform policy.\n\nIf you're eligible, I can guide you through the return initiation process. Please note that our refund policy states that a full refund is issued when the product is returned within the 7-day window in original condition (Source 3, 1.4 REFUND ELIGIBILITY CONDITIONS).\n\nNext step: Please provide your order ID and the date of purchase so I can assist you further.",
+    "contexts": [
+      "Product complaint — Electronics. Rating: 1.0/5. Issue type: refund_request. Customer title: Defective. Review: Like several other reviewers, the product ruined the picture. I read some comments on other negative reviews and can say that there were no other variables at play in my case. There appears",
+      "Product complaint — Electronics. Rating: 2.0/5. Issue type: refund_request. Customer title: Returned due to IQ. Review: I was hesitant to order this lens because of the mixed reviews related to image quality differences between various samples",
+      "1.4 REFUND ELIGIBILITY CONDITIONS\nFull refund is issued when:\n- Product is returned within the 7-day window in original condition\n- Product arrived defective or damaged\n- Product does not match the description or photos\n- Order was canceled before shipment\nPartial refunds may apply if products show ",
+      "Product complaint — Electronics. Rating: 1.0/5. Issue type: product_defective. Customer title: Defective on arrival. Review: This is a cheap and low quality product, and you're taking your chances as you may get a defective piece like I did.",
+      "Product complaint — Electronics. Rating: 3.0/5. Issue type: product_defective. Customer title: Just ok. Review: This was my 2nd L lens that I had to return due to poor image quality. I don't know if there is some big secret to getting a good picture our of these or if I just have bad luck in getting"
+    ],
+    "latency": 7.1,
+    "mode": "rag_chain",
+    "classified_intent": "refund_request",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.4286,
+      "answer_relevancy": 0.0,
+      "answer_correctness": 0.4403,
+      "semantic_similarity": 0.6185,
+      "response_groundedness": 0.75
+    }
+  },
+  {
+    "id": 21,
+    "question": "I want to cancel my order and get a refund",
+    "order_id": "203096f03d82e0dffbc41ebc2e2bcfb7",
+    "expected_intent": "refund_request",
+    "ground_truth": "The system should check the order status and explain cancellation/refund options based on current order state.",
+    "answer": "ESCALATED: This case has been flagged for human review. Reason: order was delivered 11 days late and I would like a full refund. A support specialist will contact you within 4 hours via email.",
+    "contexts": [
+      "ESCALATED: This case has been flagged for human review. Reason: order was delivered 11 days late and I would like a full refund. A support specialist will contact you within 4 hours via email."
+    ],
+    "latency": 34.97,
+    "mode": "agent",
+    "classified_intent": "refund_request",
+    "docs_retrieved": 0,
+    "scores": {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.0265,
+      "answer_correctness": 0.2879,
+      "semantic_similarity": 0.4017,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 22,
+    "question": "How do I request a refund?",
+    "order_id": "",
+    "expected_intent": "refund_request",
+    "ground_truth": "The system should explain the refund request process, including steps to initiate a refund and the required conditions.",
+    "answer": "I can sense your frustration with the product, and I'm here to help you with the refund process. \n\nTo determine your eligibility for a refund, I need to know more about your order. However, based on our conversation, I can tell you that you're eligible for a refund if the product doesn't match the description or photos (Source 2, 1.4 REFUND ELIGIBILITY CONDITIONS).\n\nSince you didn't provide your order ID, I'll need to ask you a few more questions to assist you further. Can you please provide me with your order ID so I can look into your purchase and initiate the return process for you?\n\nOnce I have your order ID, I can guide you through the return initiation process.",
+    "contexts": [
+      ". Please initiate a return via the app. A full refund will be processed once we receive the item.",
+      "1.4 REFUND ELIGIBILITY CONDITIONS\nFull refund is issued when:\n- Product is returned within the 7-day window in original condition\n- Product arrived defective or damaged\n- Product does not match the description or photos\n- Order was canceled before shipment\nPartial refunds may apply if products show ",
+      "Product complaint — Electronics. Rating: 2.0/5. Issue type: refund_request. Customer title: Initially pleased, then disappointed.. Review: I like the quality of the sound and the adjustability of this device. The sliders provide a full range over a fair distance, so you can accurately set the volume",
+      "3.1 DISPATCH SLA\nSellers must dispatch orders within 3 business days of order confirmation.\nFailure to dispatch results in automatic order cancellation and full refund.\n\n3.2 PRODUCT ACCURACY\nSellers are required to ensure product listings accurately represent the item\nin terms of: photos, descriptio",
+      "4.1 Under Brazilian law, customers have the right to:\n- Clear and accurate product information (CDC Art. 6, III)\n- Cancel online purchases within 7 days without penalty (CDC Art. 49)\n- Receive products matching their description (CDC Art. 35)\n- Claim repair, replacement, or refund for defective prod"
+    ],
+    "latency": 5.21,
+    "mode": "rag_chain",
+    "classified_intent": "refund_request",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.375,
+      "answer_relevancy": 0.6077,
+      "answer_correctness": 0.6102,
+      "semantic_similarity": 0.5658,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 23,
+    "question": "I need a reimbursement for the product I received",
+    "order_id": "",
+    "expected_intent": "refund_request",
+    "ground_truth": "The system should explain refund eligibility criteria and ask for the order ID to proceed with the request.",
+    "answer": "I understand your frustration, and I'm here to help you with your reimbursement request. However, I need to clarify a few things to ensure we can proceed with your case.\n\nBased on our conversation, I don't have enough information in my records to answer this precisely. Let me escalate this to a specialist who can help you further.\n\nTo better assist you, could you please provide me with the Order ID and the date you received the product? This information will help me look into your case and provide a more accurate response.\n\nOnce I have this information, I'll be happy to guide you through the return initiation process.\n\n**Next step action:** Please provide the Order ID and the date you received the product so I can escalate your case to a specialist.",
+    "contexts": [
+      ". I demand reimbursement of the amounts paid.",
+      ". it was posted in the mail as indicated. and until today I have not received any notification from the company regarding the return and analysis to have my reimbursement",
+      ". I already made my request for reimbursement by phone. Waiting...",
+      "Order ID: 8711deabc099e5d2c3c89afd73e485a6. Category: auto. Review score: 1/5. Delivery status: on time. Customer feedback: product shown with 3 items, but they only delivered 2 items, so I am evolving and asking for reimbursement of the amount paid",
+      "1.1 RETURN WINDOW\nCustomers have the right to return any product within 7 (seven) calendar days\nof receiving the item, in accordance with Article 49 of the Brazilian Consumer\nDefense Code (Codigo de Defesa do Consumidor - CDC). This right applies to\npurchases made online without the need to provide ",
+      "Support ticket (product defective). Priority: high. Channel: email. Customer query: Order 48d5f41593d593945092952e824ce2f8: the product arrived damaged. I have photos. I paid R$37.78 and expect either a refund or a new working product. Resolved by: A replacement will be shipped within 2 business day"
+    ],
+    "latency": 15.02,
+    "mode": "rag_chain",
+    "classified_intent": "refund_request",
+    "docs_retrieved": 6,
+    "scores": {
+      "faithfulness": 0.4444,
+      "answer_relevancy": 0.0,
+      "answer_correctness": 0.3936,
+      "semantic_similarity": 0.5744,
+      "response_groundedness": 0.5
+    }
+  },
+  {
+    "id": 24,
+    "question": "This product was terrible, I want my money back",
+    "order_id": "53cdb2fc8bc7dce0b6741e2150273451",
+    "expected_intent": "refund_request",
+    "ground_truth": "The system should empathize, check the order, explain refund/return options based on policy, and provide steps to initiate a return.",
+    "answer": "Based on the information provided, it appears that you are eligible for a full refund since you returned the product within the 7-day window in original condition. However, please note that the return window was extended to 30 days due to the product being defective.\n\nTo proceed with the refund, I will need to verify the product condition and the reason for return. I will also need to confirm the payment method used for the purchase.\n\nPlease confirm that the product is in its original condition and that you would like to proceed with the refund. If you have any additional information or documentation, please provide it to me.\n\nNext step: Please provide a photo of the product in its original condition and a brief explanation of the reason for return.",
+    "contexts": [
+      "Based on the information provided, it appears that you are eligible for a full refund since you returned the product within the 7-day window in original condition. However, please note that the return window was extended to 30 days due to the product being defective.\n\nTo proceed with the refund, I will need to verify the product condition and the reason for return. I will also need to confirm the payment method used for the purchase.\n\nPlease confirm that the product is in its original condition and that you would like to proceed with the refund. If you have any additional information or documentation, please provide it to me.\n\nNext step: Please provide a photo of the product in its original condition and a brief explanation of the reason for return."
+    ],
+    "latency": 19.63,
+    "mode": "agent",
+    "classified_intent": "refund_request",
+    "docs_retrieved": 0,
+    "scores": {
+      "faithfulness": 0.875,
+      "answer_relevancy": 0.0,
+      "answer_correctness": 0.352,
+      "semantic_similarity": 0.5079,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 25,
+    "question": "I'd like to return this and get a full refund",
+    "order_id": "",
+    "expected_intent": "refund_request",
+    "ground_truth": "The system should explain the return and refund policy, including timeframes and eligibility conditions.",
+    "answer": "I understand your frustration with the product, and I'm here to help you with the return process. \n\nBased on our records, it seems that you're eligible for a full refund, as per our return policy (Source 1). However, please note that you'll need to pay for the return shipping costs, as mentioned in other customer feedback (Source 2, Source 3).\n\nTo initiate the return process, please follow these steps:\n\n1. Please go to the Olist app and select the order you'd like to return.\n2. Choose the item you'd like to return and select the reason for return.\n3. Print the return shipping label and attach it to the outside of the package.\n4. Ship the item back to us within 5 business days.\n\nOnce we receive the item, we'll process your refund within 3-5 business days. Please note that the refund will be issued to the original payment method.\n\nNext step: Please go to the Olist app and initiate the return process by selecting the order and item you'd like to return.",
+    "contexts": [
+      ". Please initiate a return via the app. A full refund will be processed once we receive the item.",
+      ". We struggled with it to receive reception but no go. Just a bunch of static. I am giving it 1 star because the company responded right away to my email and is giving me a full refund due to the product not working; but after shipping costs ($5.94 to get to me and $5.44 to return the item) I am at ",
+      ". Suspect the problem was with the age of the mouse.We returned the item for a full refund without any problem. Of course we had to pay the postage for the return, so it really wasn't a FULL refund. We have used other Belkin products and would chose them again if the need arises.",
+      "Product complaint — Electronics. Rating: 1.0/5. Issue type: refund_request. Customer title: quality and problems of return. Review: I ordered this 2 days ago and receive it damage and want to return it , but seems like there is a problems of this return on line, so don't know what to do. I will try ",
+      ". That is absurd for a $12 item. Why should I pay to return a defective item? All I can do is write bad reviews in many places."
+    ],
+    "latency": 5.08,
+    "mode": "rag_chain",
+    "classified_intent": "refund_request",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.6,
+      "answer_relevancy": 0.3996,
+      "answer_correctness": 0.3049,
+      "semantic_similarity": 0.4696,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 26,
+    "question": "Can I do a chargeback on my order?",
+    "order_id": "",
+    "expected_intent": "refund_request",
+    "ground_truth": "The system should explain the proper refund process through the platform before considering chargebacks, and outline the policy.",
+    "answer": "I can sense your frustration, and I'm here to help you with your concern. However, I need to clarify a few things before we proceed.\n\nBased on the information provided, I don't have enough information in my records to answer this precisely. Let me escalate this to a specialist who can help you further.\n\nTo better assist you, could you please provide me with your order ID and the date you made the purchase? This will allow me to check the status of your order and provide you with a more accurate answer.\n\nOnce I have this information, I'll be happy to help you with your refund and chargeback options.\n\nNext step action: Please provide your order ID and the date you made the purchase so I can assist you further.",
+    "contexts": [
+      ". So I canceled the order and want a refund.",
+      ". NOW RETURN AND CANCEL THE ORDER DEFINITELY.",
+      ". I'm very irritated and if they don't send me my order correctly I'll go to court.",
+      "Order ID: 033c0d8e5bce8110d7900e088c75389d. Category: sports_leisure. Review score: 1/5. Delivery status: on time. Customer feedback: I requested the cancellation before delivery, I want to exercise my right of repentance, return the product and get my money back",
+      "1.1 RETURN WINDOW\nCustomers have the right to return any product within 7 (seven) calendar days\nof receiving the item, in accordance with Article 49 of the Brazilian Consumer\nDefense Code (Codigo de Defesa do Consumidor - CDC). This right applies to\npurchases made online without the need to provide ",
+      "2.1 DELIVERY TIMEFRAMES\nStandard delivery: 5-20 business days depending on seller location and\ncustomer zip code. Estimated delivery dates are calculated at checkout.\n\n2.2 LATE DELIVERY COMPENSATION\nIf delivery exceeds the estimated date by more than 7 days, the customer\nis entitled to:\n- Priority c"
+    ],
+    "latency": 14.33,
+    "mode": "rag_chain",
+    "classified_intent": "refund_request",
+    "docs_retrieved": 6,
+    "scores": {
+      "faithfulness": 0.2222,
+      "answer_relevancy": -0.0,
+      "answer_correctness": 0.2544,
+      "semantic_similarity": 0.5562,
+      "response_groundedness": 0.5
+    }
+  },
+  {
+    "id": 27,
+    "question": "The product I received is broken",
+    "order_id": "e481f51cbdc54678b7cc49136f2d6af7",
+    "expected_intent": "product_issue",
+    "ground_truth": "The system should empathize, acknowledge the defective product report, and explain the return/replacement process per policy.",
+    "answer": "I'm so sorry to hear that the product you received is broken. I can imagine how frustrating that must be, especially if you've been a customer for a while and expect better quality. \n\nWe've had similar complaints from other customers in the past, where the product stopped working or broke within a short period of time. For example, one customer received a broken item in their order (Source 1) and another customer's product broke within a week (Source 3). We've also had a customer report a similar issue with the build quality of our electronics product, where the steel ring inside was broken (Source 5).\n\nAccording to our policy, we will replace the defective product at no extra cost to you. We sincerely apologize for the defective product and will make sure to get a replacement shipped to you as soon as possible.\n\nTo initiate the resolution, please reply to this message with your preferred method of contact (phone, email, or chat) so we can assist you further. We'll also need you to confirm your order ID, which is e481f51cbdc54678b7cc49136f2d6af7.\n\nNext step: Please reply to this message with your preferred contact method and order ID confirmation.",
+    "contexts": [
+      "Support ticket (product defective). Priority: high. Channel: app. Customer query: I received a broken item in my order d1839b49944e9f40df652ab476e812b7. The product product stopped working after just 182 days of use. This is unacceptable. Resolved by: We sincerely apologize for the defective product",
+      "Support ticket (product defective). Priority: high. Channel: phone. Customer query: I received a broken item in my order 32bc13d17332ed4f07e360611c146b87. The product product stopped working after just 275 days of use. This is unacceptable. Resolved by: We sincerely apologize for the defective produ",
+      "Support ticket (product defective). Priority: high. Channel: chat. Customer query: Terrible quality! Order f87f3a5e91df877dc36b65fb69ff2465 — the product broke within a week. I have been a customer for years and expect better than this. Resolved by: A replacement will be shipped within 2 business da",
+      "Support ticket (product defective). Priority: high. Channel: email. Customer query: Terrible quality! Order 4083ae51fa136337c09bce24beff2fe4 — the toys broke within a week. I have been a customer for years and expect better than this. Resolved by: We sincerely apologize for the defective product",
+      "Product complaint — Electronics. Rating: 3.0/5. Issue type: product_defective. Customer title: Nice imaging quality , BUT. Review: The imaging quality is fine , but the build quality is really bad , for my case , when i received it , the steel ring inside is broken and tip out . I need to push it ba"
+    ],
+    "latency": 6.02,
+    "mode": "rag_chain",
+    "classified_intent": "product_issue",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.6667,
+      "answer_relevancy": 0.3792,
+      "answer_correctness": 0.3761,
+      "semantic_similarity": 0.4455,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 28,
+    "question": "I got the wrong item in my order",
+    "order_id": "",
+    "expected_intent": "product_issue",
+    "ground_truth": "The system should acknowledge the wrong item issue, ask for the order ID, and explain the resolution process.",
+    "answer": "I'm so sorry to hear that you received the wrong item in your order. I can imagine how frustrating that must be for you. We take situations like this very seriously and want to make it right.\n\nWe've had similar complaints from other customers in the past, where they received incorrect items in their orders. For example, one customer received a 5-pack of 1 foot monitor/PC power cords instead of the item they ordered (Source 5).\n\nAccording to our policy, if you received the wrong item in your order, we'll replace it with the correct item or provide a full refund, whichever you prefer. We'll also cover the cost of return shipping (Source 1).\n\nTo initiate the resolution, please provide me with your order ID so I can look into this further. You can find your order ID in your order confirmation email or on your order summary page. Once I have this information, I'll be happy to assist you in getting the correct item or a refund.\n\nPlease go ahead and provide your order ID, and I'll get started on resolving this issue for you.",
+    "contexts": [
+      "Support ticket (product defective). Priority: high. Channel: chat. Customer query: I received a broken item in my order f1ee3463a2c0ddd328a63ac9db6af746. The product product stopped working after just 168 days of use. This is unacceptable. Resolved by: We sincerely apologize for the defective produc",
+      "Support ticket (product defective). Priority: high. Channel: phone. Customer query: I received a broken item in my order e66e29f65af321ea428495d66066e809. The product product stopped working after just 439 days of use. This is unacceptable. Resolved by: We sincerely apologize for the defective produ",
+      "Support ticket (product defective). Priority: high. Channel: email. Customer query: I received a broken item in my order 151e44f3dd461fe0838b6f59f884749f. The product product stopped working after just 189 days of use. This is unacceptable. Resolved by: We sincerely apologize for the defective produ",
+      "Support ticket (product defective). Priority: high. Channel: app. Customer query: I received a broken item in my order 0a5c74ccc786ced7903270de9d6c170a. The product product stopped working after just 224 days of use. This is unacceptable. Resolved by: We sincerely apologize for the defective product",
+      "Product complaint — Electronics. Rating: 1.0/5. Issue type: technical_issue. Customer title: Incorrect Item Received. Review: The item I received was not what I ordered. Beware, my order was fulfilled by Miriam Holdings LLC. The item I received was a 5-pack of 1 foot monitor/PC power cords. Buyer be"
+    ],
+    "latency": 4.86,
+    "mode": "rag_chain",
+    "classified_intent": "product_issue",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.1667,
+      "answer_relevancy": 0.0796,
+      "answer_correctness": 0.326,
+      "semantic_similarity": 0.598,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 29,
+    "question": "The product is defective and not working at all",
+    "order_id": "",
+    "expected_intent": "product_issue",
+    "ground_truth": "The system should empathize and explain the process for reporting defective products and getting a replacement or refund.",
+    "answer": "I'm so sorry to hear that your product is not working as expected. I can imagine how frustrating that must be for you. \n\nWe've had similar complaints from other customers in the past. For instance, one customer mentioned that their product broke within a week (Source 2), and another customer received a broken item in their order (Source 5). We apologize for any inconvenience this has caused.\n\nAccording to our policy, if a product is defective, we offer a replacement or a full refund. We strive to provide the best possible products to our customers, and we're committed to making things right.\n\nTo initiate the resolution, please provide me with your order ID so I can look into this further. Once I have that information, I'll be happy to assist you with a replacement or a refund.",
+    "contexts": [
+      "Product complaint — Electronics. Rating: 3.0/5. Issue type: product_defective. Customer title: Works as expected but shipping time was horrible.. Review: Does what was expected and it wasn't broken. Very inexpensive. It just took a month and a half to be shipped to me via slow boat from China. Buy A",
+      "Support ticket (product defective). Priority: high. Channel: chat. Customer query: Terrible quality! Order 129bcf7c8ac0deab5d5830dab42b51b0 — the product broke within a week. I have been a customer for years and expect better than this. Resolved by: We sincerely apologize for the defective product",
+      "Support ticket (product defective). Priority: high. Channel: app. Customer query: Terrible quality! Order 48ea816d75222e26e37782d2ebe2ea5b — the health_beauty broke within a week. I have been a customer for years and expect better than this. Resolved by: We sincerely apologize for the defective prod",
+      "Product complaint — Electronics. Rating: 2.0/5. Issue type: product_defective. Customer title: Ok product. Review: I got what I expected for this price: a marginally acceptable product. A few were broken, overall the quality was mediocre.",
+      "Support ticket (product defective). Priority: high. Channel: email. Customer query: I received a broken item in my order ba21298fdb05dad91b7b31f4b3b17364. The health_beauty product stopped working after just 197 days of use. This is unacceptable. Resolved by: We sincerely apologize for the defective"
+    ],
+    "latency": 5.84,
+    "mode": "rag_chain",
+    "classified_intent": "product_issue",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.4,
+      "answer_relevancy": 0.7209,
+      "answer_correctness": 0.4543,
+      "semantic_similarity": 0.554,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 30,
+    "question": "What I received is completely different from what was described",
+    "order_id": "",
+    "expected_intent": "product_issue",
+    "ground_truth": "The system should acknowledge the mismatch, explain the consumer's rights, and outline the return/refund process for items not as described.",
+    "answer": "I'm so sorry to hear that the product you received doesn't match the description. I can imagine how frustrating that must be for you. We've had similar complaints from other customers in the past, where the product received didn't match the description or images provided (Source 5).\n\nIn fact, we've had customers express similar concerns in their reviews, such as receiving the wrong product (Source 1, Source 2, Source 3, Source 4). We apologize for any inconvenience this has caused.\n\nAccording to our policy, if the product doesn't match the description, we offer a replacement or refund option. We're sorry the product did not match the description (Source 1).\n\nTo initiate the resolution, please provide me with your order ID so I can look into this further. Once I have the order ID, I can assist you with a replacement or refund, whichever you prefer.",
+    "contexts": [
+      "Support ticket (product not as described). Priority: medium. Channel: app. Customer query: I received the wrong product for order a61af3cdf328f1d0a9f63286918c67bd. I ordered a product but received something completely different. I need a replacement or refund. Resolved by: We are sorry the product d",
+      "Order ID: 8bf34e270470d172db01882f498e9162. Category: auto. Review score: 1/5. Delivery status: LATE by 3 days. Customer feedback: There was damage to the packaging. The product went to another destination before this one. The product photo does not match what I received. The product seems to work",
+      "In the last purchase I was disappointed, the purchased product has nothing to do with the described, in terms of quality and brand. I made the request for return, but I did not receive return.\nI'll wait",
+      "I received a product, however, it is not the purchase I made, my order was for a cover/bag with a zipper and I received a thin cover, very ugly!\n\nI need you to send us the correct merchandise",
+      "Product complaint — Electronics. Rating: 1.0/5. Issue type: not_as_described. Customer title: What you see is not what you get.. Review: While the item you receive is more or less the same kind of thing as what you ordered, it is not what appears in the title of the product or the images"
+    ],
+    "latency": 5.07,
+    "mode": "rag_chain",
+    "classified_intent": "product_issue",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.875,
+      "answer_relevancy": 0.5313,
+      "answer_correctness": 0.4756,
+      "semantic_similarity": 0.4026,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 31,
+    "question": "My item arrived damaged, the packaging was crushed",
+    "order_id": "",
+    "expected_intent": "product_issue",
+    "ground_truth": "The system should empathize with the damaged delivery, and explain how to report damaged items and get a resolution.",
+    "answer": "I'm so sorry to hear that your item arrived damaged with crushed packaging. I can imagine how frustrating that must be for you. \n\nIt seems like you're not the only one experiencing this issue. We've had similar complaints from other customers in the past, where the packaging was damaged upon arrival (Source 1, Source 2, Source 3, Source 4). I want to assure you that we take these issues seriously and are committed to making things right.\n\nAccording to our policy, if your item arrives damaged, you're eligible for a replacement or a refund. We'll work with you to resolve this issue as quickly as possible. Please note that we'll need to verify the damage and initiate the return process.\n\nTo initiate the resolution, please provide me with your Order ID so I can look into this further. Once I have that information, I'll guide you through the next steps to get a replacement or a refund.",
+    "contexts": [
+      "Product complaint — Electronics. Rating: 2.0/5. Issue type: product_defective. Customer title: you get what you pay for. Review: I haven't had a problem with the actual disks, but they tend to arrive with the spindles and packaging broken, and often I'll find loose disks in the box. Did I say broken",
+      "Order ID: 732c61dedcbe590b6b5d8a7609bf25b2. Category: health_beauty. Review score: 3/5. Delivery status: on time. Customer feedback: The product arrived with the box crushed... As if they had put something on top of it. However, no malfunctions, but negligence with the product.",
+      ". Of course, the packaging arrived crumpled and only god knows if the product is working or not, I haven't tested it yet.",
+      "Order ID: 5d073530ec28aa4104bb37b6c4b1a22b. Category: electronics. Review score: 3/5. Delivery status: on time. Customer feedback: The product arrived with the box all crumpled!\nReally crushed.. no care for the product!",
+      ". Product was DOA and lacked normal packaging such as a poly bag etc. What gives Amazon are you taking customer returns and then reshipping them as new, this is not OK, in fact it is illegal, it is listed as new it should show up as new. How did factory box arrived crushed yet the shipping box was n"
+    ],
+    "latency": 4.66,
+    "mode": "rag_chain",
+    "classified_intent": "product_issue",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.3,
+      "answer_relevancy": 0.8257,
+      "answer_correctness": 0.3388,
+      "semantic_similarity": 0.5553,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 32,
+    "question": "Product has missing parts, it's incomplete",
+    "order_id": "",
+    "expected_intent": "product_issue",
+    "ground_truth": "The system should acknowledge the incomplete product, and explain options for replacement or refund.",
+    "answer": "I'm so sorry to hear that your product arrived incomplete. I can imagine how frustrating that must be for you. It seems like you're not alone in this issue, as we've had similar complaints from other customers (Source 1, Source 2, Source 3). They've also experienced missing parts and incomplete products, which can be really disappointing.\n\nAt Olist, we take situations like this seriously and want to make it right. According to our policy, if a product is missing parts or is incomplete, we'll either replace it with a new one or provide a full refund, depending on your preference (Source 1). We'll also cover the shipping costs for the replacement or refund.\n\nTo initiate the resolution, please provide me with your Order ID so I can look into this further. If you don't have your Order ID handy, please let me know and I can guide you through the process of finding it. Once I have the Order ID, I'll be happy to assist you in getting a replacement or refund for your incomplete product.\n\nNext step: Please provide your Order ID so I can proceed with the resolution.",
+    "contexts": [
+      "Order ID: 01d90c5856f7551e108f2a0864ff6e54. Category: health_beauty. Review score: 1/5. Delivery status: on time. Customer feedback: My product arrived incomplete, there was a product missing, whaite. I'm very upset.",
+      "Order ID: cb52e15d9560e5dadaf5732671a919d1. Category: health_beauty. Review score: 1/5. Delivery status: on time. Customer feedback: I received the incomplete product, missing 01 item!",
+      "Order ID: 7b0991b804c1f59ff08aed876cd41c5b. Category: housewares. Review score: 1/5. Delivery status: on time. Customer feedback: Competent logistics, but nothing works if the product is not complete.\nI cannot use the incomplete product",
+      "When I placed the new order, the product did not arrive in the correct quantity.",
+      ". I always received them. The products mentioned are missing. Why?"
+    ],
+    "latency": 5.39,
+    "mode": "rag_chain",
+    "classified_intent": "product_issue",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.6667,
+      "answer_relevancy": 0.1795,
+      "answer_correctness": 0.5051,
+      "semantic_similarity": 0.5919,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 33,
+    "question": "I think the product I received is counterfeit",
+    "order_id": "",
+    "expected_intent": "product_issue",
+    "ground_truth": "The system should take the counterfeit report seriously, explain the platform's policy on authentic goods, and offer escalation options.",
+    "answer": "I'm so sorry to hear that you think the product you received might be counterfeit. That must be really frustrating and concerning for you. I want to assure you that we take these kinds of issues very seriously and are here to help.\n\nWe've had similar complaints from other customers about counterfeit products, and I want to thank you for bringing this to our attention. (Source 3) One customer even mentioned that it was obvious the product was counterfeit even through the packaging. (Source 3)\n\nAccording to our platform policy, if you received the wrong item or a counterfeit product, we'll provide a return label at no cost, and you can initiate a return via the app. (Source 2) Once we receive the item, we'll process a full refund or replacement, whichever you prefer.\n\nTo initiate the resolution, please follow these steps:\n\n1. Take photos of the received item and packaging to help us investigate further.\n2. Contact support through the app or website, and let us know that you'd like to initiate a return due to a counterfeit product.\n3. We'll provide a return label at no cost, and you can send the item back to us.\n\nPlease let us know how you'd like to proceed, and we'll guide you through the next steps.",
+    "contexts": [
+      "Order ID: c7c5cb848cb25afc53c7a8d2527a9ad0. Category: health_beauty. Review score: 1/5. Delivery status: on time. Customer feedback: The product did not come in the manufacturer's packaging, everything leads to believe that it is counterfeit. I will return.",
+      "2.4 WRONG ITEM DELIVERED\nIf you received the wrong item:\n1. Take photos of the received item and packaging\n2. Contact support through the app or website\n3. A return label will be provided at no cost\n4. Replacement will be shipped or full refund issued within 5 business days\n\n========================",
+      "Product complaint — Electronics. Rating: 1.0/5. Issue type: not_as_described. Customer title: Item from freedomoclock is a counterfeit. Review: This should never have been sold. Now that I know what to look for, it is obvious even through the packaging that this is a counterfeit item",
+      ". Please initiate a return via the app. A full refund will be processed once we receive the item.",
+      ". I will be returning item for an exchange. I will update review after that process. If volume controll worked rating would be higher."
+    ],
+    "latency": 5.27,
+    "mode": "rag_chain",
+    "classified_intent": "product_issue",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.9,
+      "answer_relevancy": 0.6039,
+      "answer_correctness": 0.5828,
+      "semantic_similarity": 0.5667,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 34,
+    "question": "What is your return policy?",
+    "order_id": "",
+    "expected_intent": "policy_query",
+    "ground_truth": "The system should explain the return policy including the return window, conditions for returns, and how to initiate a return.",
+    "answer": "I understand you're looking for information on our return policy. I want to acknowledge that it can be frustrating to deal with defective products, and I'm here to help you understand our process.\n\nAccording to our platform policy (Source 1), we have an extended return window for defective or damaged products. For non-durable goods, the return window is 30 days, and for durable goods (electronics, appliances, furniture), it's 90 days.\n\nIf you have a defective product, you can initiate a return within this extended window. Please note that you'll need to provide proof of the defect, and we'll guide you through the return process.\n\nTo proceed, please check your order details and let me know the order ID and category of the product you'd like to return. This will help me assist you further.\n\nNext step: Please provide the order ID and category of the product you'd like to return.",
+    "contexts": [
+      "1.2 EXTENDED RETURN FOR DEFECTIVE PRODUCTS\nFor defective or damaged products, the return window is extended to 30 days\nfor non-durable goods and 90 days for durable goods (electronics, appliances,\nfurniture), per CDC Article 26.\n\n1.3 REFUND PROCESSING TIMELINE\n- Credit card payments: 5-10 business d",
+      "Order ID: cdca52aa619c8e59bd64701d54571cc0. Category: computers. Review score: 2/5. Delivery status: on time. Customer feedback: Excellent store but defective product! I look forward to exchange!",
+      "1.4 REFUND ELIGIBILITY CONDITIONS\nFull refund is issued when:\n- Product is returned within the 7-day window in original condition\n- Product arrived defective or damaged\n- Product does not match the description or photos\n- Order was canceled before shipment\nPartial refunds may apply if products show ",
+      ". This is an unacceptably high failure rate. And Tivo's return/exchange policies are weighted heavily against the consumer. The first time it cost $99 to replace with a refurbished unit. This time Tivo wants $149 to replace (again with a refurbished unit that only carries a 30 day warranty). Both ti",
+      "Order ID: 451a92b9b2211031e527f7f85525388c. Category: telephony. Review score: 1/5. Delivery status: on time. Customer feedback: Defective charger and the store refuses to exchange it."
+    ],
+    "latency": 5.0,
+    "mode": "rag_chain",
+    "classified_intent": "policy_query",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.6667,
+      "answer_relevancy": 0.7225,
+      "answer_correctness": 0.6118,
+      "semantic_similarity": 0.5379,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 35,
+    "question": "How many days do I have to return a product?",
+    "order_id": "",
+    "expected_intent": "policy_query",
+    "ground_truth": "The system should state the specific return window period and any conditions that apply to returns.",
+    "answer": "I understand you're looking for information on the return window for a product. I want to acknowledge that it can be frustrating when you're unsure about the return policy.\n\nAccording to our platform policy (Source 2), customers have the right to return any product within 7 (seven) calendar days of receiving the item. This right applies to purchases made online without the need to provide a reason.\n\nHowever, I also want to mention that there's an exception for defective or damaged products (Source 1). For those cases, the return window is extended to 30 days for non-durable goods and 90 days for durable goods (electronics, appliances, furniture).\n\nTo clarify, please let me know if you're looking to return a product due to a defect or if you're returning it within the standard 7-day window. This will help me provide a more accurate answer.\n\nNext step: Please provide more information about your situation so I can assist you further.",
+    "contexts": [
+      "1.2 EXTENDED RETURN FOR DEFECTIVE PRODUCTS\nFor defective or damaged products, the return window is extended to 30 days\nfor non-durable goods and 90 days for durable goods (electronics, appliances,\nfurniture), per CDC Article 26.\n\n1.3 REFUND PROCESSING TIMELINE\n- Credit card payments: 5-10 business d",
+      "1.1 RETURN WINDOW\nCustomers have the right to return any product within 7 (seven) calendar days\nof receiving the item, in accordance with Article 49 of the Brazilian Consumer\nDefense Code (Codigo de Defesa do Consumidor - CDC). This right applies to\npurchases made online without the need to provide ",
+      "1.4 REFUND ELIGIBILITY CONDITIONS\nFull refund is issued when:\n- Product is returned within the 7-day window in original condition\n- Product arrived defective or damaged\n- Product does not match the description or photos\n- Order was canceled before shipment\nPartial refunds may apply if products show ",
+      "Product complaint — Electronics. Rating: 1.0/5. Issue type: product_defective. Customer title: Simply put..... junk.. Review: I purchased this and have incurred problems with it shortly outside of the return window.This is made from what appears to be quality components",
+      ". It still didn't work. I want to return or exchange, but realized that the return window has been closed on Oct. 17. What can I do?"
+    ],
+    "latency": 10.82,
+    "mode": "rag_chain",
+    "classified_intent": "policy_query",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.7,
+      "answer_relevancy": 0.5699,
+      "answer_correctness": 0.348,
+      "semantic_similarity": 0.5347,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 36,
+    "question": "Am I eligible for a return on electronics?",
+    "order_id": "",
+    "expected_intent": "policy_query",
+    "ground_truth": "The system should explain return eligibility for electronic products, including any special conditions or exceptions.",
+    "answer": "I understand that you're concerned about returning an electronic product. I want to acknowledge that it can be frustrating when you're not sure about the return policy.\n\nAccording to our platform policy (Source 2), for defective or damaged products, the return window is extended to 30 days for non-durable goods and 90 days for durable goods (electronics, appliances, furniture), per CDC Article 26.\n\nTo confirm your eligibility for a return, please check the condition of your product and the time frame since you received it. If you believe your product is defective or damaged, you can initiate a return within the extended return window.\n\nNext step: Please check your product's condition and the time frame since you received it. If you're eligible for a return, please contact our support team to initiate the return process.",
+    "contexts": [
+      "Product complaint — Electronics. Rating: 3.0/5. Issue type: product_defective. Customer title: Just ok. Review: This was my 2nd L lens that I had to return due to poor image quality. I don't know if there is some big secret to getting a good picture our of these or if I just have bad luck in getting",
+      "1.2 EXTENDED RETURN FOR DEFECTIVE PRODUCTS\nFor defective or damaged products, the return window is extended to 30 days\nfor non-durable goods and 90 days for durable goods (electronics, appliances,\nfurniture), per CDC Article 26.\n\n1.3 REFUND PROCESSING TIMELINE\n- Credit card payments: 5-10 business d",
+      "Product complaint — Electronics. Rating: 1.0/5. Issue type: refund_request. Customer title: Unreliable, Lots of HDCP Issues. Review: I had to return this twice due to HDCP compatibility issues. Maybe it was just a bad batch, but it was an absolute nightmare getting this to work with my setup",
+      "1.4 REFUND ELIGIBILITY CONDITIONS\nFull refund is issued when:\n- Product is returned within the 7-day window in original condition\n- Product arrived defective or damaged\n- Product does not match the description or photos\n- Order was canceled before shipment\nPartial refunds may apply if products show ",
+      ". The unit was defective and junk.Amazon would not accept the return due to the hazardous nature of the battery, but they did refund the purchase price, now"
+    ],
+    "latency": 6.3,
+    "mode": "rag_chain",
+    "classified_intent": "policy_query",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.6667,
+      "answer_relevancy": 0.5486,
+      "answer_correctness": 0.5329,
+      "semantic_similarity": 0.6314,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 37,
+    "question": "What are my consumer rights for defective products?",
+    "order_id": "",
+    "expected_intent": "policy_query",
+    "ground_truth": "The system should explain consumer rights under Brazilian CDC (Consumer Defense Code) for defective products.",
+    "answer": "I understand that you're concerned about your consumer rights for defective products. I want to assure you that we take these issues seriously and are here to help.\n\nAccording to our platform policy (Source 1), under Brazilian law, customers have the right to claim repair, replacement, or refund for defective products (CDC Art. 18). Additionally, the return window for defective products is extended to 30 days for non-durable goods and 90 days for durable goods, such as electronics (Source 4).\n\nIf you believe you've received a defective product, please contact us with your order details and a clear description of the issue. We'll guide you through the next steps to resolve this matter.\n\nNext step: Please provide your order details and a description of the issue with the defective product so we can assist you further.",
+    "contexts": [
+      "4.1 Under Brazilian law, customers have the right to:\n- Clear and accurate product information (CDC Art. 6, III)\n- Cancel online purchases within 7 days without penalty (CDC Art. 49)\n- Receive products matching their description (CDC Art. 35)\n- Claim repair, replacement, or refund for defective prod",
+      ". Technically within their rights, but seems unethical to me -- they sold a defective product and aren't taking the responsibility for it.Recommend you avoid this, and be careful about other Linksys products.",
+      "Product complaint — Electronics. Rating: 1.0/5. Issue type: product_defective. Customer title: Four defective items!!! Stay away from it!. Review: This is the lowest quality product I have had in my life!!! I am typing this review with the 4th keyboard because all others were defective. Amazon provi",
+      "1.2 EXTENDED RETURN FOR DEFECTIVE PRODUCTS\nFor defective or damaged products, the return window is extended to 30 days\nfor non-durable goods and 90 days for durable goods (electronics, appliances,\nfurniture), per CDC Article 26.\n\n1.3 REFUND PROCESSING TIMELINE\n- Credit card payments: 5-10 business d",
+      "1.4 REFUND ELIGIBILITY CONDITIONS\nFull refund is issued when:\n- Product is returned within the 7-day window in original condition\n- Product arrived defective or damaged\n- Product does not match the description or photos\n- Order was canceled before shipment\nPartial refunds may apply if products show "
+    ],
+    "latency": 26.28,
+    "mode": "rag_chain",
+    "classified_intent": "policy_query",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.5556,
+      "answer_relevancy": 0.8426,
+      "answer_correctness": 0.5818,
+      "semantic_similarity": 0.6131,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 38,
+    "question": "Can I return a used item?",
+    "order_id": "",
+    "expected_intent": "policy_query",
+    "ground_truth": "The system should explain the policy on returning used or opened items, including any restrictions.",
+    "answer": "I understand your concern about returning a used item. However, according to our platform policy (Source 1), customers have the right to return any product within 7 calendar days of receiving the item, without needing to provide a reason. \n\nUnfortunately, it seems that you're inquiring about returning a used item, which is not explicitly covered in our policy. I don't have enough information in my records to answer this precisely. Let me escalate this to a specialist who can help you further.\n\nNext step: I'll transfer your case to a specialist who will review your situation and provide a more detailed response. Please hold for a moment while I do that.",
+    "contexts": [
+      "1.1 RETURN WINDOW\nCustomers have the right to return any product within 7 (seven) calendar days\nof receiving the item, in accordance with Article 49 of the Brazilian Consumer\nDefense Code (Codigo de Defesa do Consumidor - CDC). This right applies to\npurchases made online without the need to provide ",
+      "Product complaint — Electronics. Rating: 1.0/5. Issue type: product_defective. Customer title: died after 6 month indoor use. Review: I used this item for controlling a 60W light. It stopped working after only 6 month of occasional use. Having no recourse to return or exchange, I figured I should op",
+      "Product complaint — Electronics. Rating: 1.0/5. Issue type: refund_request. Customer title: This is crap. I bought it as a backup for work. Review: This is crap. I bought it as a backup for work, used it twice and the cord frayed. Because it was just outside the 30 day window, I can't return it. Wor",
+      "2.4 WRONG ITEM DELIVERED\nIf you received the wrong item:\n1. Take photos of the received item and packaging\n2. Contact support through the app or website\n3. A return label will be provided at no cost\n4. Replacement will be shipped or full refund issued within 5 business days\n\n========================",
+      "1.2 EXTENDED RETURN FOR DEFECTIVE PRODUCTS\nFor defective or damaged products, the return window is extended to 30 days\nfor non-durable goods and 90 days for durable goods (electronics, appliances,\nfurniture), per CDC Article 26.\n\n1.3 REFUND PROCESSING TIMELINE\n- Credit card payments: 5-10 business d",
+      "1.4 REFUND ELIGIBILITY CONDITIONS\nFull refund is issued when:\n- Product is returned within the 7-day window in original condition\n- Product arrived defective or damaged\n- Product does not match the description or photos\n- Order was canceled before shipment\nPartial refunds may apply if products show "
+    ],
+    "latency": 14.17,
+    "mode": "rag_chain",
+    "classified_intent": "policy_query",
+    "docs_retrieved": 6,
+    "scores": {
+      "faithfulness": 0.2,
+      "answer_relevancy": 0.0,
+      "answer_correctness": 0.4542,
+      "semantic_similarity": 0.6169,
+      "response_groundedness": 0.5
+    }
+  },
+  {
+    "id": 39,
+    "question": "What happens if the seller doesn't respond to my complaint?",
+    "order_id": "",
+    "expected_intent": "policy_query",
+    "ground_truth": "The system should explain the escalation process when sellers are unresponsive, including platform intervention timelines.",
+    "answer": "I can understand how frustrating it must be to have your complaint ignored by the seller. Unfortunately, I don't have enough information in my records to answer this precisely. Let me escalate this to a specialist who can help you further.\n\nNext step: I'll transfer you to a specialist who can assist you with your complaint. Please hold for a moment while I connect you.",
+    "contexts": [
+      "Product complaint — Electronics. Rating: 1.0/5. Issue type: general_complaint. Customer title: No. Review: Hardly works. Company doesn't respond when questioned. They wouldn't process my complaints over a month ago. Wouldn't cancel my order when requested before payment even went through.Absolutely ",
+      ". Delivery status: LATE by 13 days. Customer feedback: 1 month and until today my order has not arrived and the seller doesn't even want to be satisfied explaining something, I sent 4 complaints and nothing from him responded,",
+      "Product complaint — Electronics. Rating: 2.0/5. Issue type: product_defective. Customer title: Not the x50 version, good shipping, condition was not good. Review: The item was not the correct version, the condition was listed as good, when the item has several scratches, and does not work in any hea",
+      "Product complaint — Electronics. Rating: 2.0/5. Issue type: general_complaint. Customer title: iPad sometimes doesn't respond to pen. Review: If you are in a hurry writing down notes on your iPad, this pen could be a disaster. It frequently does not register the touch in applications like SoundPaper",
+      "My complaint is the non-delivery at the residence. I had to look for it in the mail. I have a product that was returned, and I still don't know what to do. Maybe a phone call would help.",
+      ". It is not admissible to have a partner company that does not communicate that it does not have the product to deliver and cancels the sale. Let the customer complain."
+    ],
+    "latency": 14.05,
+    "mode": "rag_chain",
+    "classified_intent": "seller_issue",
+    "docs_retrieved": 6,
+    "scores": {
+      "faithfulness": 0.4,
+      "answer_relevancy": 0.0,
+      "answer_correctness": 0.3508,
+      "semantic_similarity": 0.3121,
+      "response_groundedness": 0.5
+    }
+  },
+  {
+    "id": 40,
+    "question": "How long does a refund take to process?",
+    "order_id": "",
+    "expected_intent": "policy_query",
+    "ground_truth": "The system should provide specific refund processing timeframes and any factors that affect the timeline.",
+    "answer": "I can understand that you're eager to get your refund processed. However, I need to clarify a few things before I can provide you with an accurate answer.\n\nTo determine the refund processing timeframe, I would need to know the order ID and the days since purchase. Unfortunately, you haven't provided that information. \n\nLet me escalate this to a specialist who can help you further. They will be able to assist you with your refund and provide you with the exact processing timeframe.\n\nPlease wait for a specialist to contact you within the next 24 hours. In the meantime, I recommend that you check your email for any updates from us.\n\nNext step: Wait for a specialist to contact you within the next 24 hours.",
+    "contexts": [
+      "3.1 DISPATCH SLA\nSellers must dispatch orders within 3 business days of order confirmation.\nFailure to dispatch results in automatic order cancellation and full refund.\n\n3.2 PRODUCT ACCURACY\nSellers are required to ensure product listings accurately represent the item\nin terms of: photos, descriptio",
+      "1.2 EXTENDED RETURN FOR DEFECTIVE PRODUCTS\nFor defective or damaged products, the return window is extended to 30 days\nfor non-durable goods and 90 days for durable goods (electronics, appliances,\nfurniture), per CDC Article 26.\n\n1.3 REFUND PROCESSING TIMELINE\n- Credit card payments: 5-10 business d",
+      "1.4 REFUND ELIGIBILITY CONDITIONS\nFull refund is issued when:\n- Product is returned within the 7-day window in original condition\n- Product arrived defective or damaged\n- Product does not match the description or photos\n- Order was canceled before shipment\nPartial refunds may apply if products show ",
+      "2.1 DELIVERY TIMEFRAMES\nStandard delivery: 5-20 business days depending on seller location and\ncustomer zip code. Estimated delivery dates are calculated at checkout.\n\n2.2 LATE DELIVERY COMPENSATION\nIf delivery exceeds the estimated date by more than 7 days, the customer\nis entitled to:\n- Priority c",
+      "2.3 LOST PACKAGE POLICY\nIf tracking shows no update for 7+ consecutive days and the estimated\ndelivery date has passed, a Lost Package Investigation is initiated.\nResolution options: full refund OR free re-shipment.\nInvestigation period: up to 10 business days."
+    ],
+    "latency": 4.06,
+    "mode": "rag_chain",
+    "classified_intent": "refund_request",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0,
+      "answer_correctness": 0.5161,
+      "semantic_similarity": 0.5643,
+      "response_groundedness": 0.0
+    }
+  },
+  {
+    "id": 41,
+    "question": "I have a problem with this seller, they are not responding",
+    "order_id": "0015a82c2db000af6aaaf3ae2ecb0532",
+    "expected_intent": "seller_issue",
+    "ground_truth": "The system should look up the seller data, show their performance metrics, and advise on escalation options for unresponsive sellers.",
+    "answer": "It seems that the order ID provided does not exist in our system. However, I can still try to help you with the issue you're experiencing with the seller.\n\nCan you please provide more information about the problem you're facing with the seller, such as the date you placed the order or any communication attempts you've made with the seller? This will help me better understand the situation and provide a more accurate response.\n\nAdditionally, I can suggest checking your email or messaging history with the seller to see if there are any updates or responses from them. If you're still unable to resolve the issue, I can try to escalate the conversation to a human support agent for further assistance.\n\nPlease let me know how I can further assist you.",
+    "contexts": [
+      "It seems that the order ID provided does not exist in our system. However, I can still try to help you with the issue you're experiencing with the seller.\n\nCan you please provide more information about the problem you're facing with the seller, such as the date you placed the order or any communication attempts you've made with the seller? This will help me better understand the situation and provide a more accurate response.\n\nAdditionally, I can suggest checking your email or messaging history with the seller to see if there are any updates or responses from them. If you're still unable to resolve the issue, I can try to escalate the conversation to a human support agent for further assistance.\n\nPlease let me know how I can further assist you."
+    ],
+    "latency": 25.14,
+    "mode": "agent",
+    "classified_intent": "seller_issue",
+    "docs_retrieved": 0,
+    "scores": {
+      "faithfulness": 0.5714,
+      "answer_relevancy": 0.3236,
+      "answer_correctness": 0.4159,
+      "semantic_similarity": 0.2789,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 42,
+    "question": "This seller sent me a fake product",
+    "order_id": "001e6ad469a905060d959994f1b41e4f",
+    "expected_intent": "seller_issue",
+    "ground_truth": "The system should check the seller's metrics and complaint rate, acknowledge the concern, and explain how to report fraudulent sellers.",
+    "answer": "<seller_analysis>{\"seller_id\": \"001e6ad469a905060d959994f1b41e4f\"}</seller_analysis>\n\n<seller_analysis>{\"seller_id\": \"001e6ad469a905060d959994f1b41e4f\"}</seller_analysis>\n\nI'm so sorry to hear that you received a fake product from this seller. I've checked the seller's performance metrics, and I'll look into this further. Can you please confirm if you've already contacted the seller about this issue?",
+    "contexts": [
+      "<seller_analysis>{\"seller_id\": \"001e6ad469a905060d959994f1b41e4f\"}</seller_analysis>\n\n<seller_analysis>{\"seller_id\": \"001e6ad469a905060d959994f1b41e4f\"}</seller_analysis>\n\nI'm so sorry to hear that you received a fake product from this seller. I've checked the seller's performance metrics, and I'll look into this further. Can you please confirm if you've already contacted the seller about this issue?"
+    ],
+    "latency": 4.98,
+    "mode": "agent",
+    "classified_intent": "product_issue",
+    "docs_retrieved": 0,
+    "scores": {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.3836,
+      "answer_correctness": 0.2726,
+      "semantic_similarity": 0.5451,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 43,
+    "question": "The vendor keeps delaying my shipment",
+    "order_id": "00fc707aaaad2d31347cf883cd2dfe10",
+    "expected_intent": "seller_issue",
+    "ground_truth": "The system should check the seller's late delivery rate and provide information on the seller's performance and escalation options.",
+    "answer": "ESCALATED: This case has been flagged for human review. Reason: Seller has a high late rate and complaint rate, and the order ID provided does not exist.. A support specialist will contact you within 4 hours via email.",
+    "contexts": [
+      "ESCALATED: This case has been flagged for human review. Reason: Seller has a high late rate and complaint rate, and the order ID provided does not exist.. A support specialist will contact you within 4 hours via email."
+    ],
+    "latency": 17.05,
+    "mode": "agent",
+    "classified_intent": "seller_issue",
+    "docs_retrieved": 0,
+    "scores": {
+      "faithfulness": 0.8,
+      "answer_relevancy": 0.106,
+      "answer_correctness": 0.2683,
+      "semantic_similarity": 0.4065,
+      "response_groundedness": 1.0
+    }
+  },
+  {
+    "id": 44,
+    "question": "How do I report a bad seller?",
+    "order_id": "",
+    "expected_intent": "seller_issue",
+    "ground_truth": "The system should explain the process for reporting seller issues and what actions the platform can take.",
+    "answer": "I can understand how frustrating it must be to deal with a bad seller. I'm here to help you report the issue and find a resolution.\n\nAccording to our policies, if you've received a defective product or poor customer service from a seller, you can report the issue to us. We take all complaints seriously and will investigate the matter further.\n\nTo report a bad seller, please follow these steps:\n\n1. Log in to your Olist account and go to the 'Order History' section.\n2. Find the order in question and click on the 'Report Issue' button.\n3. Select the type of issue you're experiencing (in this case, product_defective or poor customer service).\n4. Provide a detailed description of the issue, including any relevant photos or evidence.\n5. Submit the report and our team will review it.\n\nPlease note that we'll do our best to resolve the issue with the seller, but if the seller is uncooperative, we may need to escalate the matter further.\n\nNext step: Please log in to your Olist account and go to the 'Order History' section to report the issue. If you need help with this process, feel free to ask.",
+    "contexts": [
+      "Product complaint — Electronics. Rating: 3.0/5. Issue type: product_defective. Customer title: Good for the price - Take care of the service. Review: The product does what it's suposed to do, but nothing else. But that wy you are paying that price.My first unit came defective, that speaks bad about ",
+      "Product complaint — Electronics. Rating: 2.0/5. Issue type: product_defective. Customer title: Workmanship is poor. I do not recommend this .. Review: Comfortable but the quality is poor.. The ear clip is not very flexible where it attaches to the body of the speaker. I don't see that part holding u",
+      ". I also come to report that the material of the product is of poor quality (it looks like a fair product (xing ling)) totally",
+      "Product complaint — Electronics. Rating: 1.0/5. Issue type: product_defective. Customer title: Good idea. Defective. Poor customer service.. Review: We bought this and generally liked how it worked with the iPad. Although not ultra-precise, it allowed for easier writing and for my daughter to practi",
+      ". It's usually not a seller's fault by accidentally selling a defective product. It's their fault not to take responsibility. When I described the situation to them and tried to make them aware, they refused to take the item back and refund my money by claiming that the packege had been opened and c"
+    ],
+    "latency": 6.42,
+    "mode": "rag_chain",
+    "classified_intent": "seller_issue",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.0667,
+      "answer_relevancy": 0.8399,
+      "answer_correctness": 0.5221,
+      "semantic_similarity": 0.5884,
+      "response_groundedness": 0.5
+    }
+  },
+  {
+    "id": 45,
+    "question": "The merchant won't honor the return",
+    "order_id": "",
+    "expected_intent": "seller_issue",
+    "ground_truth": "The system should explain the buyer's rights and the escalation process when a seller refuses to accept a return.",
+    "answer": "I can understand how frustrating this situation must be for you. I'm here to help you resolve the issue with the merchant.\n\nAccording to our platform policy (Source 5), for defective or damaged products, the return window is extended to 30 days for non-durable goods and 90 days for durable goods (electronics, appliances, furniture), per CDC Article 26. This means that you should be able to return the defective unit within the extended return window.\n\nHowever, I don't have enough information in my records to determine the specific return policy of the merchant or the product you purchased. Let me escalate this to a specialist who can help you further.\n\nNext step: I'll transfer you to a specialist who can review your case and provide a more detailed solution. Please hold for a moment while I connect you with the specialist.",
+    "contexts": [
+      ". I confirmed with Nikon technicians that the unit was not working properly. The merchant reluctantly agreed to replace (or $$ refund) my unit and pay the shipping costs for returning the defective unit and included very specific instructions on the manner in which I should return the unit to be rei",
+      ". The unit was defective and junk.Amazon would not accept the return due to the hazardous nature of the battery, but they did refund the purchase price, now",
+      ". But as I said, not working and not supported.Dell also refuses to accept return.",
+      ". Afterwards, I tried to refuse the courier delivery, and the delivery person did not accept it either. Now, no return regarding return",
+      "1.2 EXTENDED RETURN FOR DEFECTIVE PRODUCTS\nFor defective or damaged products, the return window is extended to 30 days\nfor non-durable goods and 90 days for durable goods (electronics, appliances,\nfurniture), per CDC Article 26.\n\n1.3 REFUND PROCESSING TIMELINE\n- Credit card payments: 5-10 business d"
+    ],
+    "latency": 6.79,
+    "mode": "rag_chain",
+    "classified_intent": "seller_issue",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.5455,
+      "answer_relevancy": 0.0,
+      "answer_correctness": 0.2198,
+      "semantic_similarity": 0.4791,
+      "response_groundedness": 0.5
+    }
+  },
+  {
+    "id": 46,
+    "question": "Hello, I need help with something",
+    "order_id": "",
+    "expected_intent": "general",
+    "ground_truth": "The system should greet the customer and ask how it can help, offering example topics like orders, returns, or policies.",
+    "answer": "I'm happy to help you with your issue. I can see that you're reaching out for assistance, but I don't have any specific information about your order yet. Can you please provide me with your order ID or a bit more context about the issue you're experiencing? This will help me better understand your situation and provide a more accurate solution. \n\nNext step: Please provide your order ID or more context about your issue so I can assist you further.",
+    "contexts": [
+      ". Order ID: 181835eef0cb512ef4d11e3240815b95. Please help. Resolved by: We have contacted the logistics partner about your order. Delays of up to 7 days can occur in high-demand periods. Your order is on its way.",
+      ". Order ID: 1164c7cd1bc7ce2567ff3159aa3cc51b. Please help. Resolved by: We have contacted the logistics partner about your order. Delays of up to 7 days can occur in high-demand periods. Your order is on its way.",
+      ". Order ID: 55f58caa1cad1cd636b5775aba8a19f5. Please help. Resolved by: We have contacted the logistics partner about your order. Delays of up to 7 days can occur in high-demand periods. Your order is on its way.",
+      ". Order ID: d9ed7b8cfe99da8442618eabb0f9997c. Please help. Resolved by: We have contacted the logistics partner about your order. Delays of up to 7 days can occur in high-demand periods. Your order is on its way.",
+      ". Order ID: 263e751209908b03a2f97de2b669f831. Please help. Resolved by: We have contacted the logistics partner about your order. Delays of up to 7 days can occur in high-demand periods. Your order is on its way."
+    ],
+    "latency": 6.39,
+    "mode": "rag_chain",
+    "classified_intent": "general",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.0,
+      "answer_correctness": 0.2946,
+      "semantic_similarity": 0.2555,
+      "response_groundedness": 0.0
+    }
+  },
+  {
+    "id": 47,
+    "question": "Thank you for your help",
+    "order_id": "",
+    "expected_intent": "general",
+    "ground_truth": "The system should respond politely, acknowledge the thanks, and offer further assistance if needed.",
+    "answer": "I'm glad to hear that you're reaching out for assistance. I can see that you've had some issues with your product, and I'm here to help resolve them. \n\nBefore we proceed, I'd like to acknowledge that it can be frustrating to experience the same problem with a replacement product. I'm committed to helping you find a solution.\n\nFrom the information I have, it seems that the issue you're experiencing is a known problem with the device, and our product engineers are working on a fix (Source 4). \n\nTo better understand your situation and provide a more accurate solution, could you please provide me with your order number or a detailed description of the issue you're experiencing? This will help me escalate your case to the right specialist.\n\nNext step: Please provide your order number or a detailed description of the issue you're experiencing so I can assist you further.",
+    "contexts": [
+      ". Therefore, I request you to resolve this issue. I await the answer!",
+      ". The Technical Support was awesome and diagnosed the problem over the phone; the issue required they ship a replacement. I got the replacement and I'm about 3 months into that and am experiencing the same problem as before. I know I got a rebuilt one, per the warranty.",
+      ". I look forward to contacting you and solving the problem",
+      ". (24652): Yes, it is actually a known issue with the device. Our product engineers are currently working on it and we are consistently looking for a specific fix for it.Andy: ok well if its a known issue then i'm just",
+      ". I do not know if this was a hardware or software issue."
+    ],
+    "latency": 7.23,
+    "mode": "rag_chain",
+    "classified_intent": "general",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.4545,
+      "answer_relevancy": 0.0,
+      "answer_correctness": 0.2435,
+      "semantic_similarity": 0.2241,
+      "response_groundedness": 0.5
+    }
+  },
+  {
+    "id": 48,
+    "question": "Can you help me with my problem?",
+    "order_id": "",
+    "expected_intent": "general",
+    "ground_truth": "The system should ask the customer to describe their issue so it can provide relevant support.",
+    "answer": "I can sense your frustration, and I'm here to help you with your issue. I've reviewed our records, and I see that you're experiencing some problems. However, I don't have enough information in my records to answer this precisely. Let me escalate this to a specialist who can help you further.\n\nNext step: Please hold for a moment while I connect you with a specialist who can assist you better.",
+    "contexts": [
+      ". Can someone help me or should I",
+      ". This does not solve my problem.",
+      ". It is 4th binocular you send me with damage or defective. Wath happend with customer service of you for cash purchases. Please solve this problem as soon as possible. Mr. Rolando Gomez",
+      "Product complaint — Electronics. Rating: 1.0/5. Issue type: general_complaint. Customer title: DOES NOT WORK WITH WINDOWS 7. Review: Below is the transcript of my help chat with tech supportRadioshark: Welcome to our real-time support chat. How can I help?AL: [10:02] trying to record program via sch",
+      ". If you want to get really frustrated, try contacting their tech support. They throw every roadblock known to man in your way, and when you finally get through the techs are brain dead and rude.I gave them 1 star only because Amazon does not allow zero.Think Amazon will help, forget it.",
+      ". I called 24 hour technical support center located in India. I had to ask the person to repeat themselves several times because of their strong dialect. The individual had to ask me to hold on several times while they searched for a solution. After about 30 minutes to an hour of following his direc"
+    ],
+    "latency": 10.48,
+    "mode": "rag_chain",
+    "classified_intent": "general",
+    "docs_retrieved": 6,
+    "scores": {
+      "faithfulness": 0.25,
+      "answer_relevancy": 0.0,
+      "answer_correctness": 0.3631,
+      "semantic_similarity": 0.1192,
+      "response_groundedness": 0.25
+    }
+  },
+  {
+    "id": 49,
+    "question": "I love this platform, keep up the great work",
+    "order_id": "",
+    "expected_intent": "general",
+    "ground_truth": "The system should thank the customer for the positive feedback and offer any additional assistance.",
+    "answer": "Thank you for your kind words about our platform. We're glad to hear that you're satisfied with your experience so far. \n\nIf you have any specific questions or concerns, please don't hesitate to reach out to us. We're here to help.\n\nNext step: If you'd like to share more about your experience or provide feedback, you can do so by clicking on the 'Help' section on our website and selecting 'Contact Us'.",
+    "contexts": [
+      "Congratulations!\nI was very pleased to have bought and received what I wanted, I recommend this e-commerce company.",
+      ". We want the opportunity to provide you with our excellent customer service and earn your positive feedback.\" WELL LET ME ASSURE YOU... THEIR SERVICE IS ANYTHING BUT GOOD and they pretty much told me to get bent, and to",
+      ". I congratulate this company for the quality, punctuality and respect for my purchases.",
+      ". I think this store is on the right path, delivering a quality product with care and respect for the customer.",
+      ", so I hope this helps others who think the same way)Over all, I'm very well pleased"
+    ],
+    "latency": 6.67,
+    "mode": "rag_chain",
+    "classified_intent": "general",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.2154,
+      "answer_correctness": 0.7834,
+      "semantic_similarity": 0.4065,
+      "response_groundedness": 0.0
+    }
+  },
+  {
+    "id": 50,
+    "question": "What payment methods do you accept?",
+    "order_id": "",
+    "expected_intent": "general",
+    "ground_truth": "The system should provide information about accepted payment methods based on available knowledge.",
+    "answer": "I understand you're looking for information on our accepted payment methods. I want to acknowledge that it can be frustrating to navigate through different options.\n\nAccording to our general policies, we accept various payment methods, including credit cards, debit cards, and installment plans (Source 1). However, I'd like to clarify that our payment methods may vary depending on the category of products you're purchasing.\n\nTo confirm our accepted payment methods for your specific order, I recommend checking your order details or contacting our support team directly. If you'd like to proceed with checking your order details, you can log in to your account and review your order summary.\n\nNext step: Please log in to your account to review your order details and confirm our accepted payment methods.",
+    "contexts": [
+      "Order ID: 9ab483dc777aa2cf47ea47d10a72c538. Category: telephony. Review score: 4/5. Delivery status: LATE by 2 days. Customer feedback: However, I sent you an email contesting the payment method, because I bought everything in 10 installments and 2 of the 3 products came with a 3 installment payment",
+      "Order ID: 62c6faba9a84c2ac9babd4395fa2345c. Category: bed_bath_table. Review score: 5/5. Delivery status: on time. Customer feedback: They delivered a little ahead of schedule. Showed efficiency in delivery. It has easy payment methods. Thanks. I thank everyone. Kisses.",
+      "Congratulations!\nI was very pleased to have bought and received what I wanted, I recommend this e-commerce company.",
+      "Support ticket (general inquiry). Priority: low. Channel: email. Customer query: I have a question about my order 0d82bda1c67bfa6b3926bcbeb8177932. Can you confirm the payment of R$41.0 went through? Resolved by: Thank you for reaching out. Your order is currently in status: delivered. Please let us",
+      "Support ticket (severe delay). Priority: high. Channel: email. Customer query: I have a question about my order eadaca4f30575b6c3a4c4efebce9d252. Can you confirm the payment of R$940.65 went through? Resolved by: Thank you for reaching out. Your order is currently in status: delivered. Please let us"
+    ],
+    "latency": 6.6,
+    "mode": "rag_chain",
+    "classified_intent": "policy_query",
+    "docs_retrieved": 5,
+    "scores": {
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0,
+      "answer_correctness": 0.4811,
+      "semantic_similarity": 0.5911,
+      "response_groundedness": 0.5
+    }
+  }
+]

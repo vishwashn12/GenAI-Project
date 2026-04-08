@@ -1,6 +1,6 @@
 import { Label } from '@radix-ui/react-label'
 import * as Switch from '@radix-ui/react-switch'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Moon, Sun } from 'lucide-react'
 import { useTheme } from '../lib/ThemeContext'
 
@@ -10,6 +10,16 @@ const defaults = {
   queryRewriting: true,
   multiQueryRetrieval: false,
   contextCompression: false,
+}
+
+/** Read saved settings from sessionStorage (per-tab, resets on new session). */
+function readSavedSettings() {
+  try {
+    const cached = sessionStorage.getItem(STORAGE_KEY)
+    return cached ? { ...defaults, ...JSON.parse(cached) } : defaults
+  } catch {
+    return defaults
+  }
 }
 
 function ToggleRow({ id, label, description, checked, onCheckedChange }) {
@@ -44,20 +54,17 @@ function ToggleRow({ id, label, description, checked, onCheckedChange }) {
 
 export default function Settings() {
   const { isDark, toggleTheme } = useTheme()
-  const [settings, setSettings] = useState(defaults)
+  // Lazy init — reads from sessionStorage immediately, no race condition
+  const [settings, setSettings] = useState(readSavedSettings)
+  const isFirstRender = useRef(true)
 
+  // Only write to storage AFTER user changes — skip the mount write
   useEffect(() => {
-    const cached = localStorage.getItem(STORAGE_KEY)
-    if (!cached) return
-    try {
-      setSettings({ ...defaults, ...JSON.parse(cached) })
-    } catch {
-      localStorage.removeItem(STORAGE_KEY)
+    if (isFirstRender.current) {
+      isFirstRender.current = false
+      return
     }
-  }, [])
-
-  useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(settings))
+    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(settings))
   }, [settings])
 
   return (

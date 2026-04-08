@@ -85,22 +85,6 @@ export default function Sidebar() {
           {isDark ? 'Light Mode' : 'Dark Mode'}
         </button>
 
-        {/* Status */}
-        <div className={`rounded-xl border p-3.5 ${
-          isDark
-            ? 'border-emerald-500/20 bg-emerald-500/5'
-            : 'border-emerald-200 bg-emerald-50/70'
-        }`}>
-          <div className="flex items-center gap-2">
-            <div className="h-2 w-2 rounded-full bg-emerald-500 shadow-sm shadow-emerald-500/50" />
-            <p className={`text-[11px] font-bold uppercase tracking-wider ${isDark ? 'text-emerald-400' : 'text-emerald-700'}`}>
-              System Online
-            </p>
-          </div>
-          <p className={`mt-1 text-xs ${isDark ? 'text-emerald-400/60' : 'text-emerald-600'}`}>
-            RAG pipeline operational
-          </p>
-        </div>
       </div>
     </aside>
   )
