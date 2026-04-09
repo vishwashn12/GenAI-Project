@@ -27,3 +27,10 @@ langgraph==0.3.34
 
 # ── Misc ──────────────────────────────────────
 tqdm>=4.66.0
+requests==2.33.1
+
+# ── Evaluation (RAGAS pipeline) ───────────────
+# Only needed to run: backend/evaluation/run_ragas_eval.py
+# Uses Groq free-tier via OpenAI-compatible adapter (no billing required)
+ragas==0.4.3
+openai==2.30.0
